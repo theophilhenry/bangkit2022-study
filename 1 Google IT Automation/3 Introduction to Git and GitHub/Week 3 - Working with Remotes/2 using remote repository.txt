@@ -1,0 +1,60 @@
+= Remote =
+Remote repository is distributed system.
+There are buncho ways to host remote repositories.
+Github, Gitlab, Git-server on local server.
+
+When we works with other, you need to do fetch and merge if nescesarry
+~$ git fetch
+You can do merge manually if there's conflict. Only then you can push your commited files!
+
+= Git Access =
+> HTTP : Read-only repository. Lets people clone without push
+> HTTP/SSH : We control who can push!
+
+= Working with Remotes =
+When we clone, git sets up with the default origin name, for ex origin/master.
+Here's to see the remote information
+~$ git remote -v
+
+- Working with multiple teams on projects that related -
+Remote repositories have a name assigned to them. By default it is 'ORIGIN' 
+This let us to track more than one remote in the same Git Dir.
+
+= Get more information on Remotes =
+~$ git remote show origin # Shows tons of information about the remote. 
+This shows if it is 'out of date',
+
+Whenever we're operating with remotes, Git uses "Remote Branches" 
+to keep copies of data that's stored in the remote repository.
+~$ git branch -r
+
+= Fetching new Changes =
+When you do git fetch, it downloaded the remote branches on our repository.
+It's not automatically mirrored to our local branches.
+Run git checkout to see the working tree,
+Run git log to see commit history,
+~$ git log origin/master
+We can see, the origin/master is the same with origin/HEAD
+But our HEAD->master is behind.
+~$ git status
+Let us know 'Your branch is behind "origin/master"' by 1 commit.
+We can merge the changes using
+~$ git merge origin/master
+
+= Updating the Local Repo =
+The shortcut way!
+~$ git pull
+Automaticaly fetch and merge, wow!
+
+Wow there's a new branch? How to have it in our local branch?
+~$ git checkout experimental
+Copies the content of the remote branch, to the local branch.
+
+~$ git remote update
+To see all remote branches, without merging like git pull.
+
+
+Explicit Merge : Creates a new merge commit. This alters the commit history and explicitly shows where a merge was executed.
+
+
+

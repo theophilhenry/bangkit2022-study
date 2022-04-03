@@ -1,0 +1,34 @@
+== Working with Files ==
+Path can be different for each OS.
+Make sure provide alternatives for platofrm we want support.
+
+-- os module --
+We can perform all kinds of file operations
+
+>>> os.remove()
+Remove a file
+>>> os.rename()
+Rename a file
+
+Both method above, if doesn't exists, it throws an error. How to check if file exists?
+os have sub-modules that deals things related to file information.
+-- os.path submodules --
+>> os.path.exists('something.txt')
+>> os.path.getsize("something.txt") # In Bytes
+>> os.path.getmtime("something.txt) # Get the last time file is modified. It returns a UNIX timestamp. Number since January 1st, 1970
+>> datetime.datetime.fromtimestamp(timestamp_) # Translate timestamp
+>> os.path.abspath("something.txt") # Returns absolute path
+
+== Directories ==
+>> os.getcwd() # Get current directories
+>> os.chdir("new_dir") # Change the current working directory
+
+>> os.mkdir("new_dir") # Create a new directory
+>> os.rmdir("new_dir") # Remove directory (Empty dir), 
+But non-empty generate error. How to fix it?
+>> os.listdir("new_dir") # Returns all sub-directories in the given dir to a List []. 
+>> os.path.isdir() # To know if it's a dir or a file
+>> os.path.join() # To join the filename with the path
+
+
+

@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Finish a Puppet deployment _ Qwiklabs_files/caff0d62ed"></script><script src="./Finish a Puppet deployment _ Qwiklabs_files/nr-1215.min.js.download"></script><script type="text/javascript" async="" src="./Finish a Puppet deployment _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Finish a Puppet deployment _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Finish a Puppet deployment _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" async="" src="./Finish a Puppet deployment _ Qwiklabs_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-gcMWyJurhs2OxKnLeJqCvLoRV/QghIiqjOme29q6JkyYNVHkVmiLiwnzz6TtRlzd"></script><script type="text/javascript" async="" src="./Finish a Puppet deployment _ Qwiklabs_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-gcMWyJurhs2OxKnLeJqCvLoRV/QghIiqjOme29q6JkyYNVHkVmiLiwnzz6TtRlzd"></script><script async="" src="./Finish a Puppet deployment _ Qwiklabs_files/gtm.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"587285446","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":237,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"587285446"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Finish a Puppet deployment | Qwiklabs</title>
+<script>
+<script>
+  dataLayer = [
+    {user: gon.current_user},
+    {content: gon.content}
+  ];
+</script>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-5XSKHDX");
+</script>
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/webcomponents-loader-60a166e60df2787cca5915e2ced8c317457f421a20f02601.download"></script>
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/vendor-2beee108ba05276bc429223ee82ed81449d233c93d45af5da84add895e1012.download"></script>
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/application-b44c688caf0e24039ff5020ad65695458c8c0edbd37ac5431ce3efa6d.download"></script>
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/hallofmirrors-75c2ea0b51280293b9c6417e3db46fb02057e62356900a03787a4e4.download"></script>
+<custom-style>
+  <style is="custom-style">[hidden] {
+  display: none !important;
+}
+
+</style>
+</custom-style>
+<custom-style>
+  <style is="custom-style">html {
+  --layout_-_display:  flex;;
+
+      --layout-inline_-_display:  inline-flex;;
+
+      --layout-horizontal_-_display:  var(--layout_-_display); --layout-horizontal_-_-ms-flex-direction:  row; --layout-horizontal_-_-webkit-flex-direction:  row; --layout-horizontal_-_flex-direction:  row;;
+
+      --layout-horizontal-reverse_-_display:  var(--layout_-_display); --layout-horizontal-reverse_-_-ms-flex-direction:  row-reverse; --layout-horizontal-reverse_-_-webkit-flex-direction:  row-reverse; --layout-horizontal-reverse_-_flex-direction:  row-reverse;;
+
+      --layout-vertical_-_display:  var(--layout_-_display); --layout-vertical_-_-ms-flex-direction:  column; --layout-vertical_-_-webkit-flex-direction:  column; --layout-vertical_-_flex-direction:  column;;
+
+      --layout-vertical-reverse_-_display:  var(--layout_-_display); --layout-vertical-reverse_-_-ms-flex-direction:  column-reverse; --layout-vertical-reverse_-_-webkit-flex-direction:  column-reverse; --layout-vertical-reverse_-_flex-direction:  column-reverse;;
+
+      --layout-wrap_-_-ms-flex-wrap:  wrap; --layout-wrap_-_-webkit-flex-wrap:  wrap; --layout-wrap_-_flex-wrap:  wrap;;
+
+      --layout-wrap-reverse_-_-ms-flex-wrap:  wrap-reverse; --layout-wrap-reverse_-_-webkit-flex-wrap:  wrap-reverse; --layout-wrap-reverse_-_flex-wrap:  wrap-reverse;;
+
+      --layout-flex-auto_-_-ms-flex:  1 1 auto; --layout-flex-auto_-_-webkit-flex:  1 1 auto; --layout-flex-auto_-_flex:  1 1 auto;;
+
+      --layout-flex-none_-_-ms-flex:  none; --layout-flex-none_-_-webkit-flex:  none; --layout-flex-none_-_flex:  none;;
+
+      --layout-flex_-_-ms-flex:  1 1 0.000000001px; --layout-flex_-_-webkit-flex:  1; --layout-flex_-_flex:  1; --layout-flex_-_-webkit-flex-basis:  0.000000001px; --layout-flex_-_flex-basis:  0.000000001px;;
+
+      --layout-flex-2_-_-ms-flex:  2; --layout-flex-2_-_-webkit-flex:  2; --layout-flex-2_-_flex:  2;;
+
+      --layout-flex-3_-_-ms-flex:  3; --layout-flex-3_-_-webkit-flex:  3; --layout-flex-3_-_flex:  3;;
+
+      --layout-flex-4_-_-ms-flex:  4; --layout-flex-4_-_-webkit-flex:  4; --layout-flex-4_-_flex:  4;;
+
+      --layout-flex-5_-_-ms-flex:  5; --layout-flex-5_-_-webkit-flex:  5; --layout-flex-5_-_flex:  5;;
+
+      --layout-flex-6_-_-ms-flex:  6; --layout-flex-6_-_-webkit-flex:  6; --layout-flex-6_-_flex:  6;;
+
+      --layout-flex-7_-_-ms-flex:  7; --layout-flex-7_-_-webkit-flex:  7; --layout-flex-7_-_flex:  7;;
+
+      --layout-flex-8_-_-ms-flex:  8; --layout-flex-8_-_-webkit-flex:  8; --layout-flex-8_-_flex:  8;;
+
+      --layout-flex-9_-_-ms-flex:  9; --layout-flex-9_-_-webkit-flex:  9; --layout-flex-9_-_flex:  9;;
+
+      --layout-flex-10_-_-ms-flex:  10; --layout-flex-10_-_-webkit-flex:  10; --layout-flex-10_-_flex:  10;;
+
+      --layout-flex-11_-_-ms-flex:  11; --layout-flex-11_-_-webkit-flex:  11; --layout-flex-11_-_flex:  11;;
+
+      --layout-flex-12_-_-ms-flex:  12; --layout-flex-12_-_-webkit-flex:  12; --layout-flex-12_-_flex:  12;;
+
+      
+
+      --layout-start_-_-ms-flex-align:  start; --layout-start_-_-webkit-align-items:  flex-start; --layout-start_-_align-items:  flex-start;;
+
+      --layout-center_-_-ms-flex-align:  center; --layout-center_-_-webkit-align-items:  center; --layout-center_-_align-items:  center;;
+
+      --layout-end_-_-ms-flex-align:  end; --layout-end_-_-webkit-align-items:  flex-end; --layout-end_-_align-items:  flex-end;;
+
+      --layout-baseline_-_-ms-flex-align:  baseline; --layout-baseline_-_-webkit-align-items:  baseline; --layout-baseline_-_align-items:  baseline;;
+
+      
+
+      --layout-start-justified_-_-ms-flex-pack:  start; --layout-start-justified_-_-webkit-justify-content:  flex-start; --layout-start-justified_-_justify-content:  flex-start;;
+
+      --layout-center-justified_-_-ms-flex-pack:  center; --layout-center-justified_-_-webkit-justify-content:  center; --layout-center-justified_-_justify-content:  center;;
+
+      --layout-end-justified_-_-ms-flex-pack:  end; --layout-end-justified_-_-webkit-justify-content:  flex-end; --layout-end-justified_-_justify-content:  flex-end;;
+
+      --layout-around-justified_-_-ms-flex-pack:  distribute; --layout-around-justified_-_-webkit-justify-content:  space-around; --layout-around-justified_-_justify-content:  space-around;;
+
+      --layout-justified_-_-ms-flex-pack:  justify; --layout-justified_-_-webkit-justify-content:  space-between; --layout-justified_-_justify-content:  space-between;;
+
+      --layout-center-center_-_-ms-flex-align:  var(--layout-center_-_-ms-flex-align); --layout-center-center_-_-webkit-align-items:  var(--layout-center_-_-webkit-align-items); --layout-center-center_-_align-items:  var(--layout-center_-_align-items); --layout-center-center_-_-ms-flex-pack:  var(--layout-center-justified_-_-ms-flex-pack); --layout-center-center_-_-webkit-justify-content:  var(--layout-center-justified_-_-webkit-justify-content); --layout-center-center_-_justify-content:  var(--layout-center-justified_-_justify-content);;
+
+      
+
+      --layout-self-start_-_-ms-align-self:  flex-start; --layout-self-start_-_-webkit-align-self:  flex-start; --layout-self-start_-_align-self:  flex-start;;
+
+      --layout-self-center_-_-ms-align-self:  center; --layout-self-center_-_-webkit-align-self:  center; --layout-self-center_-_align-self:  center;;
+
+      --layout-self-end_-_-ms-align-self:  flex-end; --layout-self-end_-_-webkit-align-self:  flex-end; --layout-self-end_-_align-self:  flex-end;;
+
+      --layout-self-stretch_-_-ms-align-self:  stretch; --layout-self-stretch_-_-webkit-align-self:  stretch; --layout-self-stretch_-_align-self:  stretch;;
+
+      --layout-self-baseline_-_-ms-align-self:  baseline; --layout-self-baseline_-_-webkit-align-self:  baseline; --layout-self-baseline_-_align-self:  baseline;;
+
+      
+
+      --layout-start-aligned_-_-ms-flex-line-pack:  start; --layout-start-aligned_-_-ms-align-content:  flex-start; --layout-start-aligned_-_-webkit-align-content:  flex-start; --layout-start-aligned_-_align-content:  flex-start;;
+
+      --layout-end-aligned_-_-ms-flex-line-pack:  end; --layout-end-aligned_-_-ms-align-content:  flex-end; --layout-end-aligned_-_-webkit-align-content:  flex-end; --layout-end-aligned_-_align-content:  flex-end;;
+
+      --layout-center-aligned_-_-ms-flex-line-pack:  center; --layout-center-aligned_-_-ms-align-content:  center; --layout-center-aligned_-_-webkit-align-content:  center; --layout-center-aligned_-_align-content:  center;;
+
+      --layout-between-aligned_-_-ms-flex-line-pack:  justify; --layout-between-aligned_-_-ms-align-content:  space-between; --layout-between-aligned_-_-webkit-align-content:  space-between; --layout-between-aligned_-_align-content:  space-between;;
+
+      --layout-around-aligned_-_-ms-flex-line-pack:  distribute; --layout-around-aligned_-_-ms-align-content:  space-around; --layout-around-aligned_-_-webkit-align-content:  space-around; --layout-around-aligned_-_align-content:  space-around;;
+
+      
+
+      --layout-block_-_display:  block;;
+
+      --layout-invisible_-_visibility:  hidden !important;;
+
+      --layout-relative_-_position:  relative;;
+
+      --layout-fit_-_position:  absolute; --layout-fit_-_top:  0; --layout-fit_-_right:  0; --layout-fit_-_bottom:  0; --layout-fit_-_left:  0;;
+
+      --layout-scroll_-_-webkit-overflow-scrolling:  touch; --layout-scroll_-_overflow:  auto;;
+
+      --layout-fullbleed_-_margin:  0; --layout-fullbleed_-_height:  100vh;;
+
+      
+
+      --layout-fixed-top_-_position:  fixed; --layout-fixed-top_-_top:  0; --layout-fixed-top_-_left:  0; --layout-fixed-top_-_right:  0;;
+
+      --layout-fixed-right_-_position:  fixed; --layout-fixed-right_-_top:  0; --layout-fixed-right_-_right:  0; --layout-fixed-right_-_bottom:  0;;
+
+      --layout-fixed-bottom_-_position:  fixed; --layout-fixed-bottom_-_right:  0; --layout-fixed-bottom_-_bottom:  0; --layout-fixed-bottom_-_left:  0;;
+
+      --layout-fixed-left_-_position:  fixed; --layout-fixed-left_-_top:  0; --layout-fixed-left_-_bottom:  0; --layout-fixed-left_-_left:  0;;
+}
+
+</style>
+</custom-style><style>[hidden] { display: none !important; }</style><custom-style>
+  <style is="custom-style">html {
+  --google-red-100: #f4c7c3;
+      --google-red-300: #e67c73;
+      --google-red-500: #db4437;
+      --google-red-700: #c53929;
+
+      --google-blue-100: #c6dafc;
+      --google-blue-300: #7baaf7;
+      --google-blue-500: #4285f4;
+      --google-blue-700: #3367d6;
+
+      --google-green-100: #b7e1cd;
+      --google-green-300: #57bb8a;
+      --google-green-500: #0f9d58;
+      --google-green-700: #0b8043;
+
+      --google-yellow-100: #fce8b2;
+      --google-yellow-300: #f7cb4d;
+      --google-yellow-500: #f4b400;
+      --google-yellow-700: #f09300;
+
+      --google-grey-100: #f5f5f5;
+      --google-grey-300: #e0e0e0;
+      --google-grey-500: #9e9e9e;
+      --google-grey-700: #616161;
+
+      
+
+      --paper-red-50: #ffebee;
+      --paper-red-100: #ffcdd2;
+      --paper-red-200: #ef9a9a;
+      --paper-red-300: #e57373;
+      --paper-red-400: #ef5350;
+      --paper-red-500: #f44336;
+      --paper-red-600: #e53935;
+      --paper-red-700: #d32f2f;
+      --paper-red-800: #c62828;
+      --paper-red-900: #b71c1c;
+      --paper-red-a100: #ff8a80;
+      --paper-red-a200: #ff5252;
+      --paper-red-a400: #ff1744;
+      --paper-red-a700: #d50000;
+
+      --paper-pink-50: #fce4ec;
+      --paper-pink-100: #f8bbd0;
+      --paper-pink-200: #f48fb1;
+      --paper-pink-300: #f06292;
+      --paper-pink-400: #ec407a;
+      --paper-pink-500: #e91e63;
+      --paper-pink-600: #d81b60;
+      --paper-pink-700: #c2185b;
+      --paper-pink-800: #ad1457;
+      --paper-pink-900: #880e4f;
+      --paper-pink-a100: #ff80ab;
+      --paper-pink-a200: #ff4081;
+      --paper-pink-a400: #f50057;
+      --paper-pink-a700: #c51162;
+
+      --paper-purple-50: #f3e5f5;
+      --paper-purple-100: #e1bee7;
+      --paper-purple-200: #ce93d8;
+      --paper-purple-300: #ba68c8;
+      --paper-purple-400: #ab47bc;
+      --paper-purple-500: #9c27b0;
+      --paper-purple-600: #8e24aa;
+      --paper-purple-700: #7b1fa2;
+      --paper-purple-800: #6a1b9a;
+      --paper-purple-900: #4a148c;
+      --paper-purple-a100: #ea80fc;
+      --paper-purple-a200: #e040fb;
+      --paper-purple-a400: #d500f9;
+      --paper-purple-a700: #aa00ff;
+
+      --paper-deep-purple-50: #ede7f6;
+      --paper-deep-purple-100: #d1c4e9;
+      --paper-deep-purple-200: #b39ddb;
+      --paper-deep-purple-300: #9575cd;
+      --paper-deep-purple-400: #7e57c2;
+      --paper-deep-purple-500: #673ab7;
+      --paper-deep-purple-600: #5e35b1;
+      --paper-deep-purple-700: #512da8;
+      --paper-deep-purple-800: #4527a0;
+      --paper-deep-purple-900: #311b92;
+      --paper-deep-purple-a100: #b388ff;
+      --paper-deep-purple-a200: #7c4dff;
+      --paper-deep-purple-a400: #651fff;
+      --paper-deep-purple-a700: #6200ea;
+
+      --paper-indigo-50: #e8eaf6;
+      --paper-indigo-100: #c5cae9;
+      --paper-indigo-200: #9fa8da;
+      --paper-indigo-300: #7986cb;
+      --paper-indigo-400: #5c6bc0;
+      --paper-indigo-500: #3f51b5;
+      --paper-indigo-600: #3949ab;
+      --paper-indigo-700: #303f9f;
+      --paper-indigo-800: #283593;
+      --paper-indigo-900: #1a237e;
+      --paper-indigo-a100: #8c9eff;
+      --paper-indigo-a200: #536dfe;
+      --paper-indigo-a400: #3d5afe;
+      --paper-indigo-a700: #304ffe;
+
+      --paper-blue-50: #e3f2fd;
+      --paper-blue-100: #bbdefb;
+      --paper-blue-200: #90caf9;
+      --paper-blue-300: #64b5f6;
+      --paper-blue-400: #42a5f5;
+      --paper-blue-500: #2196f3;
+      --paper-blue-600: #1e88e5;
+      --paper-blue-700: #1976d2;
+      --paper-blue-800: #1565c0;
+      --paper-blue-900: #0d47a1;
+      --paper-blue-a100: #82b1ff;
+      --paper-blue-a200: #448aff;
+      --paper-blue-a400: #2979ff;
+      --paper-blue-a700: #2962ff;
+
+      --paper-light-blue-50: #e1f5fe;
+      --paper-light-blue-100: #b3e5fc;
+      --paper-light-blue-200: #81d4fa;
+      --paper-light-blue-300: #4fc3f7;
+      --paper-light-blue-400: #29b6f6;
+      --paper-light-blue-500: #03a9f4;
+      --paper-light-blue-600: #039be5;
+      --paper-light-blue-700: #0288d1;
+      --paper-light-blue-800: #0277bd;
+      --paper-light-blue-900: #01579b;
+      --paper-light-blue-a100: #80d8ff;
+      --paper-light-blue-a200: #40c4ff;
+      --paper-light-blue-a400: #00b0ff;
+      --paper-light-blue-a700: #0091ea;
+
+      --paper-cyan-50: #e0f7fa;
+      --paper-cyan-100: #b2ebf2;
+      --paper-cyan-200: #80deea;
+      --paper-cyan-300: #4dd0e1;
+      --paper-cyan-400: #26c6da;
+      --paper-cyan-500: #00bcd4;
+      --paper-cyan-600: #00acc1;
+      --paper-cyan-700: #0097a7;
+      --paper-cyan-800: #00838f;
+      --paper-cyan-900: #006064;
+      --paper-cyan-a100: #84ffff;
+      --paper-cyan-a200: #18ffff;
+      --paper-cyan-a400: #00e5ff;
+      --paper-cyan-a700: #00b8d4;
+
+      --paper-teal-50: #e0f2f1;
+      --paper-teal-100: #b2dfdb;
+      --paper-teal-200: #80cbc4;
+      --paper-teal-300: #4db6ac;
+      --paper-teal-400: #26a69a;
+      --paper-teal-500: #009688;
+      --paper-teal-600: #00897b;
+      --paper-teal-700: #00796b;
+      --paper-teal-800: #00695c;
+      --paper-teal-900: #004d40;
+      --paper-teal-a100: #a7ffeb;
+      --paper-teal-a200: #64ffda;
+      --paper-teal-a400: #1de9b6;
+      --paper-teal-a700: #00bfa5;
+
+      --paper-green-50: #e8f5e9;
+      --paper-green-100: #c8e6c9;
+      --paper-green-200: #a5d6a7;
+      --paper-green-300: #81c784;
+      --paper-green-400: #66bb6a;
+      --paper-green-500: #4caf50;
+      --paper-green-600: #43a047;
+      --paper-green-700: #388e3c;
+      --paper-green-800: #2e7d32;
+      --paper-green-900: #1b5e20;
+      --paper-green-a100: #b9f6ca;
+      --paper-green-a200: #69f0ae;
+      --paper-green-a400: #00e676;
+      --paper-green-a700: #00c853;
+
+      --paper-light-green-50: #f1f8e9;
+      --paper-light-green-100: #dcedc8;
+      --paper-light-green-200: #c5e1a5;
+      --paper-light-green-300: #aed581;
+      --paper-light-green-400: #9ccc65;
+      --paper-light-green-500: #8bc34a;
+      --paper-light-green-600: #7cb342;
+      --paper-light-green-700: #689f38;
+      --paper-light-green-800: #558b2f;
+      --paper-light-green-900: #33691e;
+      --paper-light-green-a100: #ccff90;
+      --paper-light-green-a200: #b2ff59;
+      --paper-light-green-a400: #76ff03;
+      --paper-light-green-a700: #64dd17;
+
+      --paper-lime-50: #f9fbe7;
+      --paper-lime-100: #f0f4c3;
+      --paper-lime-200: #e6ee9c;
+      --paper-lime-300: #dce775;
+      --paper-lime-400: #d4e157;
+      --paper-lime-500: #cddc39;
+      --paper-lime-600: #c0ca33;
+      --paper-lime-700: #afb42b;
+      --paper-lime-800: #9e9d24;
+      --paper-lime-900: #827717;
+      --paper-lime-a100: #f4ff81;
+      --paper-lime-a200: #eeff41;
+      --paper-lime-a400: #c6ff00;
+      --paper-lime-a700: #aeea00;
+
+      --paper-yellow-50: #fffde7;
+      --paper-yellow-100: #fff9c4;
+      --paper-yellow-200: #fff59d;
+      --paper-yellow-300: #fff176;
+      --paper-yellow-400: #ffee58;
+      --paper-yellow-500: #ffeb3b;
+      --paper-yellow-600: #fdd835;
+      --paper-yellow-700: #fbc02d;
+      --paper-yellow-800: #f9a825;
+      --paper-yellow-900: #f57f17;
+      --paper-yellow-a100: #ffff8d;
+      --paper-yellow-a200: #ffff00;
+      --paper-yellow-a400: #ffea00;
+      --paper-yellow-a700: #ffd600;
+
+      --paper-amber-50: #fff8e1;
+      --paper-amber-100: #ffecb3;
+      --paper-amber-200: #ffe082;
+      --paper-amber-300: #ffd54f;
+      --paper-amber-400: #ffca28;
+      --paper-amber-500: #ffc107;
+      --paper-amber-600: #ffb300;
+      --paper-amber-700: #ffa000;
+      --paper-amber-800: #ff8f00;
+      --paper-amber-900: #ff6f00;
+      --paper-amber-a100: #ffe57f;
+      --paper-amber-a200: #ffd740;
+      --paper-amber-a400: #ffc400;
+      --paper-amber-a700: #ffab00;
+
+      --paper-orange-50: #fff3e0;
+      --paper-orange-100: #ffe0b2;
+      --paper-orange-200: #ffcc80;
+      --paper-orange-300: #ffb74d;
+      --paper-orange-400: #ffa726;
+      --paper-orange-500: #ff9800;
+      --paper-orange-600: #fb8c00;
+      --paper-orange-700: #f57c00;
+      --paper-orange-800: #ef6c00;
+      --paper-orange-900: #e65100;
+      --paper-orange-a100: #ffd180;
+      --paper-orange-a200: #ffab40;
+      --paper-orange-a400: #ff9100;
+      --paper-orange-a700: #ff6500;
+
+      --paper-deep-orange-50: #fbe9e7;
+      --paper-deep-orange-100: #ffccbc;
+      --paper-deep-orange-200: #ffab91;
+      --paper-deep-orange-300: #ff8a65;
+      --paper-deep-orange-400: #ff7043;
+      --paper-deep-orange-500: #ff5722;
+      --paper-deep-orange-600: #f4511e;
+      --paper-deep-orange-700: #e64a19;
+      --paper-deep-orange-800: #d84315;
+      --paper-deep-orange-900: #bf360c;
+      --paper-deep-orange-a100: #ff9e80;
+      --paper-deep-orange-a200: #ff6e40;
+      --paper-deep-orange-a400: #ff3d00;
+      --paper-deep-orange-a700: #dd2c00;
+
+      --paper-brown-50: #efebe9;
+      --paper-brown-100: #d7ccc8;
+      --paper-brown-200: #bcaaa4;
+      --paper-brown-300: #a1887f;
+      --paper-brown-400: #8d6e63;
+      --paper-brown-500: #795548;
+      --paper-brown-600: #6d4c41;
+      --paper-brown-700: #5d4037;
+      --paper-brown-800: #4e342e;
+      --paper-brown-900: #3e2723;
+
+      --paper-grey-50: #fafafa;
+      --paper-grey-100: #f5f5f5;
+      --paper-grey-200: #eeeeee;
+      --paper-grey-300: #e0e0e0;
+      --paper-grey-400: #bdbdbd;
+      --paper-grey-500: #9e9e9e;
+      --paper-grey-600: #757575;
+      --paper-grey-700: #616161;
+      --paper-grey-800: #424242;
+      --paper-grey-900: #212121;
+
+      --paper-blue-grey-50: #eceff1;
+      --paper-blue-grey-100: #cfd8dc;
+      --paper-blue-grey-200: #b0bec5;
+      --paper-blue-grey-300: #90a4ae;
+      --paper-blue-grey-400: #78909c;
+      --paper-blue-grey-500: #607d8b;
+      --paper-blue-grey-600: #546e7a;
+      --paper-blue-grey-700: #455a64;
+      --paper-blue-grey-800: #37474f;
+      --paper-blue-grey-900: #263238;
+
+      
+      --dark-divider-opacity: 0.12;
+      --dark-disabled-opacity: 0.38; 
+      --dark-secondary-opacity: 0.54;
+      --dark-primary-opacity: 0.87;
+
+      
+      --light-divider-opacity: 0.12;
+      --light-disabled-opacity: 0.3; 
+      --light-secondary-opacity: 0.7;
+      --light-primary-opacity: 1.0;
+}
+
+</style>
+</custom-style><custom-style>
+  <style is="custom-style">html {
+  --primary-text-color: var(--light-theme-text-color);
+      --primary-background-color: var(--light-theme-background-color);
+      --secondary-text-color: var(--light-theme-secondary-color);
+      --disabled-text-color: var(--light-theme-disabled-color);
+      --divider-color: var(--light-theme-divider-color);
+      --error-color: var(--paper-deep-orange-a700);
+
+      
+      --primary-color: var(--paper-indigo-500);
+      --light-primary-color: var(--paper-indigo-100);
+      --dark-primary-color: var(--paper-indigo-700);
+
+      --accent-color: var(--paper-pink-a200);
+      --light-accent-color: var(--paper-pink-a100);
+      --dark-accent-color: var(--paper-pink-a400);
+
+
+      
+      --light-theme-background-color: #ffffff;
+      --light-theme-base-color: #000000;
+      --light-theme-text-color: var(--paper-grey-900);
+      --light-theme-secondary-color: #737373;  
+      --light-theme-disabled-color: #9b9b9b;  
+      --light-theme-divider-color: #dbdbdb;
+
+      
+      --dark-theme-background-color: var(--paper-grey-900);
+      --dark-theme-base-color: #ffffff;
+      --dark-theme-text-color: #ffffff;
+      --dark-theme-secondary-color: #bcbcbc;  
+      --dark-theme-disabled-color: #646464;  
+      --dark-theme-divider-color: #3c3c3c;
+
+      
+      --text-primary-color: var(--dark-theme-text-color);
+      --default-primary-color: var(--primary-color);
+}
+
+</style>
+</custom-style><script async="" src="./Finish a Puppet deployment _ Qwiklabs_files/lazy.min.js.download"></script><script src="./Finish a Puppet deployment _ Qwiklabs_files/loader.js.download"></script>
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Finish a Puppet deployment _ Qwiklabs_files/snippet.js.download"></script>
+
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="/Tb1cJirZBnbLQ+rXPBgmEK5tbBD8g4bt1b2SZoDPQLtTnb8S01H9hA6JK9TQ3WRazh2gKb9LxIjX9l7IiIgkQ==">
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<meta content="[{&quot;id&quot;:&quot;recaptcha_experiment&quot;,&quot;optimize_id&quot;:&quot;dpViOcLkT3qS4TvL2mRojA&quot;,&quot;title&quot;:&quot;No Recaptcha shown for trusted users&quot;,&quot;variant_index&quot;:1,&quot;variant&quot;:&quot;no_recaptcha&quot;}]" name="active-experiments">
+<meta content="{&quot;userId&quot;:6830640}" name="help-api-product-data">
+<meta content="This lab has instructions to automatically manage the computers in your company&#39;s fleet, including a bunch of different machines with different operating systems." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="Finish a Puppet deployment | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="This lab has instructions to automatically manage the computers in your company&#39;s fleet, including a bunch of different machines with different operating systems." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+
+
+<meta property="og:url" content="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session"><link href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session" rel="canonical">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon" type="image/x-icon">
+
+
+
+<link rel="stylesheet" media="screen" href="./Finish a Puppet deployment _ Qwiklabs_files/css">
+
+
+<link rel="stylesheet" media="all" href="./Finish a Puppet deployment _ Qwiklabs_files/application-d5e04137ffadc677c494f33296add90d71fae68a83583ac7b96eddaeb516c5.css">
+
+<style>
+  :root {
+    --primary-text-on-surface-color: #1a73e8;
+    --primary-text-on-surface-color-dark: #1568d6;
+    --primary-text-on-surface-color-darker: #135ec1;
+    --primary-text-on-surface-color-darkest: #1154ac;
+    --primary-surface-color: #1a73e8;
+    --primary-surface-color-rgb: 26,115,232;
+    --primary-surface-color-light: #d1e3fa;
+    --primary-surface-color-lightest: #e8f1fd;
+    --text-on-primary-color: #ffffff;
+    --accent-text-on-surface-color: #f29900;
+    --accent-surface-color: #f9ab00;
+    --accent-surface-color-rgb: 249,171,0;
+    --accent-surface-color-light: #ffefcc;
+    --text-on-accent-color: #202124;
+  }
+</style>
+
+
+
+</head>
+<body class="lab-show l-full no-nav application-new focuses focuses-show lab-show l-full no-nav ">
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5XSKHDX' style='display:none;visibility:hidden;' width='0'></iframe>
+</noscript>
+<div class="header-container">
+<div class="header">
+<ql-toolbar jumpenabled="">
+<div class="header__title" slot="title">
+<ql-icon-button label="Back" href="https://www.coursera.org/" id="ff28970d3d5058f0" target="_self" tip="Back">arrow_back</ql-icon-button>
+<h1 class="ql-headline-6">Finish a Puppet deployment</h1>
+</div>
+<div class="header__actions" slot="action">
+<ql-icon-button id="control-panel-target" style="display: none;">
+dashboard
+</ql-icon-button>
+<ql-menu for="control-panel-target" id="control-panel-menu" tabindex="-1" aria-hidden="true" style="left: -1000px; top: -1000px; opacity: 0; visibility: hidden;" role="menu" aria-labelledby="control-panel-target"></ql-menu>
+<ql-icon-button class="mobile-hide" icon="help_outline" id="help-menu-button" label="Open help menu" tip="Help"></ql-icon-button>
+<ql-menu for="help-menu-button" id="help-menu" tabindex="-1" aria-hidden="true" style="left: -1000px; top: -1000px; opacity: 0; visibility: hidden;" role="menu" aria-labelledby="help-menu-button">
+<ql-menu-item data-analytics-action="opened_help" data-analytics-label="lab" label="Help Center" onclick="hallofmirrors.helpService.startHelp({&quot;productData&quot;:{&quot;userId&quot;:6830640},&quot;context&quot;:&quot;lab&quot;})"></ql-menu-item>
+<ql-menu-item href="https://support.google.com/qwiklabs/contact/contact_us" label="Email support" target="_blank"></ql-menu-item>
+<ql-menu-item label="Chat support" onclick="ql.chat.open()"></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button class="mobile-hide" icon="language" id="language" label="Select your language preference" tip="Language"></ql-icon-button>
+<ql-menu for="language" tabindex="-1" aria-hidden="true" style="left: -1000px; top: -1000px; opacity: 0; visibility: hidden;" role="menu" aria-labelledby="language">
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="ar" href="/focuses/20515557?locale=ar&amp;parent=lti_session" label="العربية‬‎" lang="ar"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="de" href="/focuses/20515557?locale=de&amp;parent=lti_session" label="Deutsch" lang="de"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="en" href="/focuses/20515557?locale=en&amp;parent=lti_session" label="English" lang="en"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="es" href="/focuses/20515557?locale=es&amp;parent=lti_session" label="español (Latinoamérica)" lang="es"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="fr" href="/focuses/20515557?locale=fr&amp;parent=lti_session" label="français" lang="fr"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="fr_CA" href="/focuses/20515557?locale=fr_CA&amp;parent=lti_session" label="français (Canada)" lang="fr-CA"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="he" href="/focuses/20515557?locale=he&amp;parent=lti_session" label="עברית" lang="he"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="id" href="/focuses/20515557?locale=id&amp;parent=lti_session" label="bahasa Indonesia" lang="id"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="it" href="/focuses/20515557?locale=it&amp;parent=lti_session" label="Italiano" lang="it"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="ja" href="/focuses/20515557?locale=ja&amp;parent=lti_session" label="日本語" lang="ja"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="ko" href="/focuses/20515557?locale=ko&amp;parent=lti_session" label="한국어" lang="ko"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="pl" href="/focuses/20515557?locale=pl&amp;parent=lti_session" label="Polski" lang="pl"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="pt_BR" href="/focuses/20515557?locale=pt_BR&amp;parent=lti_session" label="português (Brasil)" lang="pt-BR"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="pt_PT" href="/focuses/20515557?locale=pt_PT&amp;parent=lti_session" label="português (Portugal)" lang="pt-PT"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="ru" href="/focuses/20515557?locale=ru&amp;parent=lti_session" label="русский" lang="ru"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="tr" href="/focuses/20515557?locale=tr&amp;parent=lti_session" label="Türkçe" lang="tr"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="zh" href="/focuses/20515557?locale=zh&amp;parent=lti_session" label="简体中文" lang="zh"></ql-menu-item>
+<ql-menu-item data-analytics-action="changed_locale" data-analytics-label="zh_TW" href="/focuses/20515557?locale=zh_TW&amp;parent=lti_session" label="繁體中文" lang="zh-TW"></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button id="my_account" label="My account" tip="My account">
+<ql-avatar></ql-avatar>
+</ql-icon-button>
+<ql-menu for="my_account" id="my_account_menu" style="max-height: 640px; left: -1000px; top: -1000px; opacity: 0; visibility: hidden;" tabindex="-1" aria-hidden="true" role="menu" aria-labelledby="my_account">
+<div class="my-account-menu">
+<ql-avatar class="l-mtl l-mbl" size="120"></ql-avatar>
+<div class="my-account-menu__user-info l-mbl">
+<h4 class="ql-subhead-1">Theophil Henry Soegianto</h4>
+<p class="ql-body-2 text--light">m2320j2803@bangkit.academy</p>
+<p class="ql-body-2 text--light">
+</p>
+<a class="text--green ql-subhead-2" href="https://googlecoursera.qwiklabs.com/my_account/payments"><ql-chip positive="">
+0 Credits
+</ql-chip>
+</a></div>
+<div class="buttons l-mbl">
+<a class="button button--hairline" id="settings" href="https://googlecoursera.qwiklabs.com/my_account/profile">Settings</a>
+</div>
+<hr>
+<ql-button data-analytics-action="clicked_sign_out" href="/users/sign_out" method="delete">
+Sign Out
+</ql-button>
+<div class="privacy l-mtl">
+<a target="_blank" class="ql-caption text--light" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<span class="ql-caption text--light l-mls l-mrs">·</span>
+<a class="ql-caption text--light" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</div>
+</ql-menu>
+
+</div>
+</ql-toolbar>
+
+</div>
+</div>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="custom-logo">Qwiklabs</div>
+</div>
+<nav class="ql-sidenav">
+<ql-sidenav-item href="/" icon="home" label="Home"></ql-sidenav-item>
+
+<ql-sidenav-item href="/catalog" icon="school" label="Catalog"></ql-sidenav-item>
+
+<ql-sidenav-item href="/profile" icon="event_note" label="Profile"></ql-sidenav-item>
+
+</nav>
+
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main" id="jump-content">
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+<div class="lab-assessment__tab js-open-lab-assessment-panel">
+<button class="js-lab-assessment-total-score">—/15</button>
+</div>
+<div aria-labelledby="lab-assessment-checkpoint" class="lab-assessment__panel js-lab-assessment-panel" role="dialog">
+<div class="lab-assessment__panel__header">
+<h4 id="lab-assessment-checkpoint">Checkpoints</h4>
+<ql-icon-button class="js-close-lab-assessment-panel" icon="arrow_forward" label="Close dialog"></ql-icon-button>
+</div>
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title" id="lab-assessment-step-title">
+Install packages
+</p>
+<div class="lab-assessment__step__action">
+<ql-button class="js-show-run-step-button" description="Install packages" step_no="1">
+Check my progress
+</ql-button>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-1">—</span>
+/ 5
+</p>
+</div>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title" id="lab-assessment-step-title">
+Fetch machine information
+</p>
+<div class="lab-assessment__step__action">
+<ql-button class="js-show-run-step-button" description="Fetch machine information" step_no="2">
+Check my progress
+</ql-button>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-2">—</span>
+/ 5
+</p>
+</div>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title" id="lab-assessment-step-title">
+Reboot machine
+</p>
+<div class="lab-assessment__step__action">
+<ql-button class="js-show-run-step-button" description="Reboot machine" step_no="3">
+Check my progress
+</ql-button>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-3">—</span>
+/ 5
+</p>
+</div>
+</div>
+
+</div>
+<ql-drawer-container class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Finish a Puppet deployment&quot;,&quot;lab_name&quot;:&quot;Finish a Puppet deployment&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="20515557" data-lab-billing-limit="0.0" data-lab-duration="5400" data-parent="lti_session" data-recaptcha-enabled="" id="lab-container">
+<ql-drawer id="terminal-drawer" slot="drawer" style="width: calc(100% - 480px); visibility: hidden;" tabindex="-1" aria-hidden="true" role="region" mode="side">
+<iframe allow="clipboard-read" class="terminal" id="embedded-resource" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource.html"></iframe>
+</ql-drawer>
+<ql-drawer-content class="js-lab-wrapper" id="lab-content" slot="drawer-content">
+<ql-drawer-container id="lab-content-container">
+<ql-drawer id="control-panel-drawer" open="" slot="drawer" width="320" aria-hidden="false" role="region" mode="side" style="width: 320px; visibility: visible;">
+
+<ql-lab-control-panel class="ql-lab-control-panel__max-height control-panel js-lab-control-panel" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labdetails="[]" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:5400}" studentresources="[]">
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/api.js.download"></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForStartLab() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForStartLab('g-recaptcha-response-data-start-lab', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForStartLab()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForStartLabAsync() {
+            return new Promise((resolve, reject) => {
+             grecaptcha.ready(async function() {
+                resolve(await grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}))
+              });
+            })
+          };
+
+                    var setInputWithRecaptchaResponseTokenForStartLab = function(id, token) {
+            var element = document.getElementById(id);
+            element.value = token;
+          }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[start_lab]" id="g-recaptcha-response-data-start-lab" data-sitekey="6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr" class="g-recaptcha g-recaptcha-response " style="" value="03AGdBq26RLcuwp1GJLH96KX3DuWyIlqrNjhR_xk9SDjEBqYn_-n6SMRAXwC0FVEXWOpdhIqCsFERLvHFaB4ECGDQbJf_18E7K6AEPQPFkuumxW4DhdJBFwtV3ZvfdRDSjxRYu95hgk_fybBiEwrUtQaPEdm234bB9QJdkP1NSRGke6TgOEjxb3fWitO0_e0tlWP7ltUbA2XzT6oIBGBAHHLyia4DqhgAyTKwQyX8dQcAWFvG95_x15Uf7SXfFrM9lrV4EvpTPrpOHXasxDGEQVbnZGEi_h1nsYGINVS80V25xh_-o8J-LquPv48wAz8txUv08se0TY_6nOJmHQbhRZKhsH2-XcSkX_6zr76egaNCVumKq4hiIrb8KxNFFmwCUtsIEGxwCZ2Euyu2tE5NFrWN0QAD3lpgTQAnmKUH5EyqQmP6wZ7ysrYCg7YZt2ky_YWPUX8n34Ql06TIrTDOM0zsThneOt_ri9gBuce3w5JmEKGpvwiIFyibBGeTfonFZRPKqd8JVc8nBNk_YjhsM452ZGptyJ1PQ7NlWhJPvxsO8uW6D2B3xu7bVyx-SJBQlUQcekGCq53ZYr52h3twvXQEl54fDFr4zbQj1qo8HhknWycu6UkSoYWsNWwZJJVcDH32EqzSlvJHFC-vrAn0q-7b8sN7eIT9khtQ7ez8HnBMN7fJmRbW9F-8x9CWUeuVN1wAQunJqmKRnQy0I2njl7FwamHPHDhLoFsVb9KPPnfTwS15HaCqwrIfnUGNmkVAtVZd9661HWCKDokkXTh-ZH69Mg-cScaOVoQuIrkXhVZasrof5zEbBS42dtEu-5NRMdV23W-VX9gISHsqTIbTR-ozv4A63Wm3OR_cc2DV62s_9oPiDHd19PhdjoRHAbWPn7RJcseJXuHFOQBTEh1uAm6F2UFWPwbD79IibPIKfZY0C24NhGA-4ZfRB1hfpZk28WHDnONerNTSRRaPqU8X-dvLQ8KhK12blZA4L9wGOmKwPqgFEpQMLcWDscYD_bsANbbEc3t3sS6Kdx3sWVNk3Jc_pCPEeGeq8R2wDAW1_bE0jRRO8Lt90hreIqR2nIeHelMxzL4AzOJd_7nFooC97mLHTyo8ehq2NKc7OMzySKrBbjUbGZlAz78Sz6cGum3M1SnGvpIQmTNrgQjdgvTvmd7OGJDqxNbgMz9OQ2OiP7yfSaQb6kzsrgvj_vjH0ec11Vq_BjsZhJXdS"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="./Finish a Puppet deployment _ Qwiklabs_files/anchor.html" width="304" height="78" role="presentation" name="a-4l5ezy5s6rf3" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></input>
+
+<div aria-live="polite" class="hidden" id="recaptcha-v2-start-lab" slot="recaptcha">
+<script src="./Finish a Puppet deployment _ Qwiklabs_files/api.js(1).download" async="" defer=""></script>
+<div data-sitekey="6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV" data-callback="recaptchaComplete" data-expired-callback="expireV2Token" class="g-recaptcha "><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="./Finish a Puppet deployment _ Qwiklabs_files/anchor(1).html" width="304" height="78" role="presentation" name="a-88uhl366uws4" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource(1).html"></iframe></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+</div>
+</ql-lab-control-panel></ql-drawer>
+<ql-drawer-content id="lab-instructions" slot="drawer-content">
+<ql-snackbar id="alert-snackbar" aria-live="polite" role="alert">Thanks for reviewing this lab.</ql-snackbar>
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message" role="alert"></p>
+<ql-icon-button class="alert__close js-alert-close" icon="clear"></ql-icon-button>
+<iframe class="l-ie-iframe-fix" tabindex="-1" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+<div class="lab-content__renderable-instructions js-lab-content">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Finish a Puppet deployment
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour 30 minutes</span>
+<span>Free</span>
+<div class="lab__rating">
+<a aria-label="Lab Reviews" href="https://googlecoursera.qwiklabs.com/focuses/20515557/reviews?parent=lti_session"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.3543"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 69.6688px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a></div>
+</div>
+</div>
+<div class="lab-outline-place-holder"></div>
+
+<div class="markdown-lab-instructions js-markdown-instructions" id="markdown-lab-instructions">
+
+<h2 id="step1">Introduction</h2>
+<p>You want to automatically manage the computers in your company's fleet, including a number of different machines with different operating systems. You've decided to use Puppet to automate the configurations on these machines. Part of the setup is already done, but there are more rules that need to be added, and more operating systems to consider.</p>
+<h3>Prerequisite</h3>
+<p>Understands the basics of Puppet, including:</p>
+<ul>
+<li>How to create Puppet classes and rules</li>
+<li>How Puppet interacts with different OSs</li>
+<li>How to use the DSL to create complex rules</li>
+</ul>
+<p>You'll have 90 minutes to complete this lab.</p>
+<h3>Start the lab</h3>
+<p>You'll need to start the lab before you can access the materials in the virtual machine OS.  To do this, click the green “Start Lab” button at the top of the screen.</p>
+<ql-infobox><strong>Note:</strong> For this lab you are going to access the <strong>Linux VM</strong> through your <strong>local SSH Client</strong>, and not use the <strong>Google Console</strong> (<strong>Open GCP Console</strong> button is not available for this lab).</ql-infobox>
+<p><img alt="Start Lab" src="./Finish a Puppet deployment _ Qwiklabs_files/dvIz+hCdCLq0P9JbORQrHU9h22GU18bW7Bo_MfQPoSs="></p>
+<p>After you click the “Start Lab” button, you will see all the SSH connection details on the left-hand side of your screen. You should have a screen that looks like this:</p>
+<p><img alt="Connection details" src="./Finish a Puppet deployment _ Qwiklabs_files/T2WTv35A3yGYeomHD1stDaAZpBpVymNqc380RdOBVe4="></p>
+<h2 id="step2">Accessing the virtual machine</h2>
+<p>Please find one of the three relevant options below based on your device's operating system.</p>
+<ql-infobox><strong>Note:</strong> Working with Qwiklabs may be similar to the work you'd perform as an <strong>IT Support Specialist</strong>; you'll be interfacing with a cutting-edge technology that requires multiple steps to access, and perhaps healthy doses of patience and persistence(!). You'll also be using <strong>SSH</strong> to enter the labs -- a critical skill in IT Support that you’ll be able to practice through the labs.</ql-infobox>
+<h3>Option 1: Windows Users: Connecting to your VM</h3>
+<p>In this section, you will use the PuTTY Secure Shell (SSH) client and your VM’s External IP address to connect.</p>
+<p><strong>Download your PPK key file</strong></p>
+<p>You can download the VM’s private key file in the PuTTY-compatible <strong>PPK</strong> format from the Qwiklabs Start Lab page. Click on <strong>Download PPK</strong>.</p>
+<p><img alt="PPK" src="./Finish a Puppet deployment _ Qwiklabs_files/ZWdhDzmDeppdXplN8b2GE+J4HjiEs50sjhmD9fIWS1o="></p>
+<p><strong>Connect to your VM using SSH and PuTTY</strong></p>
+<ol>
+<li>
+<p>You can download Putty from <a href="https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe" target="_blank">here</a></p>
+</li>
+<li>
+<p>In the <strong>Host Name (or IP address)</strong> box, enter username@external_ip_address.</p>
+</li>
+</ol>
+<ql-infobox><strong>Note:</strong> Replace <strong>username</strong> and <strong>external_ip_address</strong> with values provided in the lab.</ql-infobox>
+<p><img alt="Putty_1" src="./Finish a Puppet deployment _ Qwiklabs_files/9WwXv1tzK+UCbpUECb94LBndveI2BCYa9uDRGzctoLg="></p>
+<ol start="3">
+<li>
+<p>In the <strong>Category</strong> list, expand <strong>SSH</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Auth</strong> (don’t expand it).</p>
+</li>
+<li>
+<p>In the <strong>Private key file for authentication</strong> box, browse to the PPK file that you downloaded and double-click it.</p>
+</li>
+<li>
+<p>Click on the <strong>Open</strong> button.</p>
+</li>
+</ol>
+<ql-infobox><strong>Note:</strong> PPK file is to be imported into PuTTY tool using the Browse option available in it. It should not be opened directly but only to be used in PuTTY.</ql-infobox>
+<p><img alt="Putty_2" src="./Finish a Puppet deployment _ Qwiklabs_files/MwC8aAcTUdtsEuTl2v2DSI7YSCshINv_gzm4ZCSrQig="></p>
+<ol start="7">
+<li>Click <strong>Yes</strong> when prompted to allow a first connection to this remote SSH server. Because you are using a key pair for authentication, you will not be prompted for a password.</li>
+</ol>
+<p><strong>Common issues</strong></p>
+<p>If PuTTY fails to connect to your Linux VM, verify that:</p>
+<ul>
+<li>
+<p>You entered <strong>&lt;username&gt;</strong>@<strong>&lt;external ip address&gt;</strong> in PuTTY.</p>
+</li>
+<li>
+<p>You downloaded the fresh new PPK file for this lab from Qwiklabs.</p>
+</li>
+<li>
+<p>You are using the downloaded PPK file in PuTTY.</p>
+</li>
+</ul>
+<h3>Option 2: OSX and Linux users: Connecting to your VM via SSH</h3>
+<p><strong>Download your VM’s private key file.</strong></p>
+<p>You can download the private key file in PEM format from the Qwiklabs Start Lab page. Click on <strong>Download PEM</strong>.</p>
+<p><img alt="PEM" src="./Finish a Puppet deployment _ Qwiklabs_files/TZ4BSQDq+w742PSPxwNDKIMY180rPQHbNISmuG59wP8="></p>
+<p><strong>Connect to the VM using the local Terminal application</strong></p>
+<p>A <strong>terminal</strong> is a program which provides a <strong>text-based interface for typing commands</strong>. Here you will use your terminal as an SSH client to connect with lab provided Linux VM.</p>
+<ol>
+<li>
+<p>Open the Terminal application.</p>
+<ul>
+<li>
+<p>To open the terminal in Linux use the shortcut key <strong>Ctrl+Alt+t</strong>.</p>
+</li>
+<li>
+<p>To open terminal in <strong>Mac</strong> (OSX) enter <strong>cmd + space</strong> and search for <strong>terminal</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Enter the following commands.</p>
+</li>
+</ol>
+<ql-infobox><strong>Note:</strong> Substitute the <strong>path/filename for the PEM</strong> file you downloaded, <strong>username</strong> and <strong>External IP Address</strong>.</ql-infobox>
+<p>You will most likely find the PEM file in <strong>Downloads</strong>. If you have not changed the download settings of your system, then the path of the PEM key will be <strong>~/Downloads/qwikLABS-XXXXX.pem</strong></p>
+<ql-code-block language="plaintext">
+chmod 600 ~/Downloads/qwikLABS-XXXXX.pem
+</ql-code-block>
+<ql-code-block language="plaintext">
+ssh -i ~/Downloads/qwikLABS-XXXXX.pem username@External Ip Address
+</ql-code-block>
+<p><img alt="SSH" src="./Finish a Puppet deployment _ Qwiklabs_files/H7KOW2FkxOOgsLdxMuZWTl2PoqPlgElnb0YQtC319hQ="></p>
+<h3>Option 3: Chrome OS users: Connecting to your VM via SSH</h3>
+<ql-infobox><strong>Note:</strong> Make sure you are not in <strong>Incognito/Private mode</strong> while launching the application.</ql-infobox>
+<p><strong>Download your VM’s private key file.</strong></p>
+<p>You can download the private key file in PEM format from the Qwiklabs Start Lab page. Click on <strong>Download PEM</strong>.</p>
+<p><img alt="PEM" src="./Finish a Puppet deployment _ Qwiklabs_files/TZ4BSQDq+w742PSPxwNDKIMY180rPQHbNISmuG59wP8="></p>
+<p><strong>Connect to your VM</strong></p>
+<ol>
+<li>
+<p>Add Secure Shell from  <a href="https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo" target="_blank">here</a> to your Chrome browser.</p>
+</li>
+<li>
+<p>Open the Secure Shell app and click on <strong>[New Connection]</strong>.</p>
+<p><img alt="new-connection-button" src="./Finish a Puppet deployment _ Qwiklabs_files/5wIwLwU6D1mNWkeYsNVEazGLRrzuWsUq6t6_1NnWqcM="></p>
+</li>
+<li>
+<p>In the <strong>username</strong> section, enter the username given in the Connection Details Panel of the lab. And for the <strong>hostname</strong> section, enter the external IP of your VM instance that is mentioned in the Connection Details Panel of the lab.</p>
+<p><img alt="username-hostname-fields" src="./Finish a Puppet deployment _ Qwiklabs_files/fymsGw1B5jFEANsD41CD5dFrPWa9ASKnqfoVONtOxlA="></p>
+</li>
+<li>
+<p>In the <strong>Identity</strong> section, import the downloaded PEM key by clicking on the <strong>Import…</strong> button beside the field. Choose your PEM key and click on the <strong>OPEN</strong> button.</p>
+</li>
+</ol>
+<ql-infobox><strong>Note:</strong> If the key is still not available after importing it, refresh the application, and select it from the <strong>Identity</strong> drop-down menu.
+</ql-infobox>
+<ol start="5">
+<li>
+<p>Once your key is uploaded, click on the <strong>[ENTER] Connect</strong> button below.</p>
+<p><img alt="import-button" src="./Finish a Puppet deployment _ Qwiklabs_files/knW0T7QscQZ6VVTUPKW_kF4LERKArqDwSQqWnF8GxV8="></p>
+</li>
+<li>
+<p>For any prompts, type <strong>yes</strong> to continue.</p>
+</li>
+<li>
+<p>You have now successfully connected to your Linux VM.</p>
+</li>
+</ol>
+<p>You're now ready to continue with the lab!</p>
+<h2 id="step3">Puppet rules</h2>
+<p>The goal of this exercise is for you to see what Puppet looks like in action. During this lab, you'll be connecting to two different VMs. The VM named <strong>puppet</strong> is the Puppet Master that has the Puppet rules that you'll need to edit.  The VM named <strong>linux-instance</strong> is a client VM that you'll use to test that your catalog was applied successfully.</p>
+<p>The manifests used for the production environment are located in  the directory <code>/etc/puppet/code/environments/production/manifests</code>, which contains a site.pp file with the node definitions that will be used for this deployment. On top of that, the modules directory contains a bunch of modules that are already in use. You'll be extending the code of this deployment to add more functionality to it.</p>
+<h2 id="step4">Install packages</h2>
+<p>There's a module named <strong>packages</strong> on the <strong>Puppet VM instance</strong> that takes care of installing the packages that are needed on the machines in the fleet. Use the command to visit the module:</p>
+<ql-code-block language="plaintext">
+cd /etc/puppet/code/environments/production/modules/packages
+</ql-code-block>
+<p>This module already has a resource entry specifying that <strong>python-requests</strong> is installed on all machines. You can see the <code>init.pp</code> file using the <strong>cat</strong> command on the <strong>Puppet VM instance.</strong></p>
+<ql-code-block language="plaintext">
+cat manifests/init.pp
+</ql-code-block>
+<p>Output:</p>
+<p><img alt="1.png" src="./Finish a Puppet deployment _ Qwiklabs_files/SKtNP7GmsNVmCSD_T1ITVRGGJjucA_x3sZO6y8Bxce8="></p>
+<p>Now, add an additional resource in the same <code>init.pp</code> file within the path <code>/etc/puppet/code/environments/production/modules/packages</code>, ensuring the <strong>golang</strong> package gets installed on all machines that belong to the <code>Debian</code> family of operating systems (which includes Debian, Ubuntu, LinuxMint, and a bunch of others).</p>
+<p>This resource will be very similar to the previous <strong>python-requests</strong> one. Add edit permission to the file before moving forward using:</p>
+<ql-code-block language="plaintext">
+sudo chmod 646 manifests/init.pp
+</ql-code-block>
+<p>To install the package on Debian systems only, you'll need to use the <strong>os family</strong> fact, like this:</p>
+<ql-code-block language="plaintext">
+if $facts[os][family] == "Debian" {
+# Resource entry to install golang package
+}
+</ql-code-block>
+<p>Now, open the file using nano editor and add the resource entry specifying golang package to be installed on all machines of Debian family after the previous resource entry.</p>
+<p>The snippet would now look like this:</p>
+<ql-code-block language="plaintext">
+if $facts[os][family] == "Debian" {
+     package { 'golang':
+       ensure =&gt; installed,
+     }
+  }
+</ql-code-block>
+<p>The complete <strong>init.pp</strong> file would now look similar to the below file:</p>
+<ql-code-block language="plaintext">
+class packages {
+   package { 'python-requests':
+       ensure =&gt; installed,
+   }
+   if $facts[os][family] == "Debian" {
+     package { 'golang':
+       ensure =&gt; installed,
+     }
+  }
+}
+</ql-code-block>
+<p>After this, we will also need to ensure that the <strong>nodejs</strong> package is installed on machines that belong to the <code>RedHat</code> family. Refer to the below snippet for this.</p>
+<ql-code-block language="plaintext">
+if $facts[os][family] == "RedHat" {
+  #Resource entry
+}
+</ql-code-block>
+<p>Complete the above snippet just like the previous one.</p>
+<p>The complete <strong>init.pp</strong> file should now look like this:</p>
+<ql-code-block language="plaintext">
+class packages {
+   package { 'python-requests':
+       ensure =&gt; installed,
+   }
+   if $facts[os][family] == "Debian" {
+     package { 'golang':
+       ensure =&gt; installed,
+     }
+  }
+   if $facts[os][family] == "RedHat" {
+     package { 'nodejs':
+       ensure =&gt; installed,
+     }
+  }
+}
+</ql-code-block>
+<p>Once you've edited the file and added the necessary resources, you'll want to check that the rules work successfully. We can do this by connecting to another machine in the network and verifying that the right packages are installed.</p>
+<p>We will be connecting to <strong>linux-instance</strong> using its external IP address. To fetch the external IP address of <strong>linux-instance</strong>, use the following command:</p>
+<ql-code-block language="plaintext">
+gcloud compute instances describe linux-instance --zone=us-central1-a --format='get(networkInterfaces[0].accessConfigs[0].natIP)'
+</ql-code-block>
+<p>This command outputs the external IP address of <strong>linux-instance</strong>. Copy the <strong>linux-instance</strong> external IP address, open another terminal and connect to it. Follow the instructions given in the section <code>Accessing the virtual machine</code> by clicking on <code>Accessing the virtual machine</code> from the navigation pane at the right side.</p>
+<p>Now manually run the Puppet client on your <strong>linux-instance</strong> VM instance terminal:</p>
+<ql-code-block language="plaintext">
+sudo puppet agent -v --test
+</ql-code-block>
+<p>This command should run successfully and the catalog should be applied.</p>
+<p>Output:</p>
+<p><img alt="2.png" src="./Finish a Puppet deployment _ Qwiklabs_files/RfFpfXOXyKwrUyvgjyS6iG1RjbhU53G8rA_FJYtZFyY="></p>
+<p>Now verify whether the <strong>golang</strong> package was installed on this instance. This being an machine of the Debian family should have golang installed. Use the following command to verify this:</p>
+<ql-code-block language="plaintext">
+apt policy golang
+</ql-code-block>
+<p>Output:</p>
+<p><img alt="3.png" src="./Finish a Puppet deployment _ Qwiklabs_files/UX0dKVKdTUmCQQlWBI94YfBS2YAqb9+n8PkbiPyOUEI="></p>
+<p>With this, you've seen how you can use Puppet's facts and package resources to install specific packages on machines within your fleet.</p>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="1" labinstanceid="43101170">
+Install packages
+</ql-activity-tracking></p>
+<h2 id="step5">Fetch machine information</h2>
+<p>It's now time to navigate to the <strong>machine_info</strong> module in our Puppet environment. In the <strong>Puppet VM terminal,</strong> navigate to the module using the following command:</p>
+<ql-code-block language="plaintext">
+cd /etc/puppet/code/environments/production/modules/machine_info
+</ql-code-block>
+<p>The <strong>machine_info</strong> module gathers some information from the machine using <strong>Puppet</strong> facts and then stores it in a file. Currently, the module is always storing this information in <code>/tmp/machine_info.</code></p>
+<p>Let's check this out:</p>
+<ql-code-block language="plaintext">
+cat manifests/init.pp
+</ql-code-block>
+<p>Output:</p>
+<p><img alt="4.png" src="./Finish a Puppet deployment _ Qwiklabs_files/scwu0DQ8s3UIMlaV8j__nPWlRyTKp4yxQuqKxaLtylc="></p>
+<p>You can view the path in the above file. This path doesn't work for Windows machines. So, you need to adapt this rule for Windows.</p>
+<p>Add edit permission to the file using the following command before we adapt the rule.</p>
+<ql-code-block language="plaintext">
+sudo chmod 646 manifests/init.pp
+</ql-code-block>
+<p>Now we will be using <code>$facts[kernel]</code> fact to check if the kernel is "windows". If so, set a <strong>$info_path</strong> variable to "C:\Windows\Temp\Machine_Info.txt", otherwise set it to "/tmp/machine_info.txt". To do this, open the file using nano editor and add the below rule after the default path within the class <code>machine_info</code>.</p>
+<ql-code-block language="plaintext">
+  if $facts[kernel] == "windows" {
+       $info_path = "C:\Windows\Temp\Machine_Info.txt"
+  } else {
+       $info_path = "/tmp/machine_info.txt"
+  }
+</ql-code-block>
+<p>The file should now look similar to:</p>
+<ql-code-block language="plaintext">
+class machine_info {
+   file { '/tmp/machine_info.txt':
+       content =&gt; template('machine_info/info.erb'),
+   }
+   if $facts[kernel] == "windows" {
+       $info_path = "C:\Windows\Temp\Machine_Info.txt"
+   } else {
+       $info_path = "/tmp/machine_info.txt"
+   }
+}
+</ql-code-block>
+<p>By default the file resources are stored in the path defined in the name of the resource (the string in the first line) within the class. We can also set different paths, by setting the path attribute.</p>
+<p>We will now be renaming the resource to "machine_info" and then use the variable in the path attribute. The variable we are using to store the path in the above rule is <strong>$info_path</strong>.</p>
+<p>Remove the following part from the file <strong>manifests/init.pp</strong>.</p>
+<ql-code-block language="plaintext">
+   file { '/tmp/machine_info.txt':
+       content =&gt; template('machine_info/info.erb'),
+   }
+</ql-code-block>
+<p>And add the following resource after the rule within the class definition:</p>
+<ql-code-block language="plaintext">
+   file { 'machine_info':
+        path =&gt; $info_path,
+        content =&gt; template('machine_info/info.erb'),
+    }
+</ql-code-block>
+<p>The complete manifests/init.pp file should now look like this:</p>
+<ql-code-block language="plaintext">
+class machine_info {
+  if $facts[kernel] == "windows" {
+       $info_path = "C:\Windows\Temp\Machine_Info.txt"
+   } else {
+       $info_path = "/tmp/machine_info.txt"
+   }
+ file { 'machine_info':
+       path =&gt; $info_path,
+       content =&gt; template('machine_info/info.erb'),
+   }
+}
+</ql-code-block>
+<h3>Puppet Templates</h3>
+<p>Templates are documents that combine code, data, and literal text to produce a final rendered output. The goal of a template is to manage a complicated piece of text with simple inputs.</p>
+<p>In Puppet, you'll usually use templates to manage the content of configuration files (via the content attribute of the file resource type).</p>
+<p>Templates are written in a templating language, which is specialized for generating text from data. Puppet supports two templating languages:</p>
+<ul>
+<li>
+<strong>Embedded Puppet (EPP)</strong> uses Puppet expressions in special tags. It's easy for any Puppet user to read, but only works with newer Puppet versions. (≥ 4.0, or late 3.x versions with future parser enabled.)</li>
+<li>
+<strong>Embedded Ruby (ERB)</strong> uses Ruby code in tags. You need to know a small bit of Ruby to read it, but it works with all Puppet versions.</li>
+</ul>
+<p>Now, take a look at the template file using the following command.</p>
+<ql-code-block language="plaintext">
+cat templates/info.erb
+</ql-code-block>
+<p>Puppet templates generally use data taken from Puppet variables. Templates are files that are pre-processed, some values gets replaced with variables. In this case, the file currently includes the values of three facts. We will be adding a new fact in this file now.</p>
+<p>Add edit permissions to the file using <code>templates/info.erb</code> using the following command:</p>
+<ql-code-block language="plaintext">
+sudo chmod 646 templates/info.erb
+</ql-code-block>
+<p>Now open the file using nano editor and add the following fact just after the last fact within the file:</p>
+<ql-code-block language="plaintext">
+Network Interfaces: &lt;%= @interfaces %&gt;
+</ql-code-block>
+<p>The template should now look like this:</p>
+<ql-code-block language="plaintext">
+Machine Information
+-------------------
+Disks: &lt;%= @disks %&gt;
+Memory: &lt;%= @memory %&gt;
+Processors: &lt;%= @processors %&gt;
+Network Interfaces: &lt;%= @interfaces %&gt;
+}
+</ql-code-block>
+<p>To check if this worked correctly, return to <strong>linux-instance</strong> VM terminal and manually run the client on that machine using the following command:</p>
+<ql-code-block language="plaintext">
+sudo puppet agent -v --test
+</ql-code-block>
+<p>This command should run successfully and the catalog should be applied.</p>
+<p>Now verify that the <strong>machine_info</strong> file has the required information using:</p>
+<ql-code-block language="plaintext">
+cat /tmp/machine_info.txt
+</ql-code-block>
+<p>Output:</p>
+<p><img alt="5.png" src="./Finish a Puppet deployment _ Qwiklabs_files/nuNj3H4tXNFVklnQQEo2MA97aZX1RUpBaam9Q0RR3pk="></p>
+<p>And with that, you've seen how you can fetch machine information and store it according to the operating system.</p>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="2" labinstanceid="43101170">
+Fetch machine information
+</ql-activity-tracking></p>
+<h2 id="step6">Reboot machine</h2>
+<p>For the last exercise, we will be creating a new module named <strong>reboot</strong>, that checks if a node has been online for more than <strong>30 days</strong>. If so, then reboot the computer.</p>
+<p>To do that, you'll start by creating the module directory.</p>
+<p>Switch back to <strong>puppet</strong> VM terminal and run the following command:</p>
+<ql-code-block language="plaintext">
+sudo mkdir -p /etc/puppet/code/environments/production/modules/reboot/manifests
+</ql-code-block>
+<p>Go to the <code>manifests/</code> directory.</p>
+<ql-code-block language="plaintext">
+cd /etc/puppet/code/environments/production/modules/reboot/manifests
+</ql-code-block>
+<p>Create an <strong>init.pp</strong> file for the reboot module in the <code>manifests/</code> directory.</p>
+<ql-code-block language="plaintext">
+sudo touch init.pp
+</ql-code-block>
+<p>Open <strong>init.pp</strong> with nano editor using sudo.</p>
+<ql-code-block language="plaintext">
+sudo nano init.pp
+</ql-code-block>
+<p>In this file, you'll start by creating a class called <code>reboot</code>.</p>
+<p>The way to reboot a computer depends on the OS that it's running. So, you'll set a variable that has one of the following reboot commands, based on the kernel fact:</p>
+<ul>
+<li>
+<strong>shutdown /r</strong> on windows</li>
+<li>
+<strong>shutdown -r now</strong> on Darwin (macOS)</li>
+<li>
+<strong>reboot</strong> on Linux.</li>
+</ul>
+<p>Hence, add the following snippet in the file <strong>init.pp</strong>:</p>
+<ql-code-block language="plaintext">
+class reboot {
+  if $facts[kernel] == "windows" {
+    $cmd = "shutdown /r"
+  } elsif $facts[kernel] == "Darwin" {
+    $cmd = "shutdown -r now"
+  } else {
+    $cmd = "reboot"
+  }
+}
+</ql-code-block>
+<p>With this variable defined, we will now define an exec resource that calls the command, but only when the <strong>uptime_days</strong> fact is larger than 30 days.</p>
+<p>Add the following snippet after the previous one within the class definition in the file <strong>reboot/manifests/init.pp</strong>:</p>
+<ql-code-block language="plaintext">
+if $facts[uptime_days] &gt; 30 {
+        exec { 'reboot':
+           command =&gt; $cmd,
+        }
+    }
+</ql-code-block>
+<p>The complete <strong>reboot/manifests/init.pp</strong> should now look like this:</p>
+<ql-code-block language="plaintext">
+class reboot {
+  if $facts[kernel] == "windows" {
+    $cmd = "shutdown /r"
+  } elsif $facts[kernel] == "Darwin" {
+    $cmd = "shutdown -r now"
+  } else {
+    $cmd = "reboot"
+  }
+  if $facts[uptime_days] &gt; 30 {
+    exec { 'reboot':
+      command =&gt; $cmd,
+     }
+   }
+}
+</ql-code-block>
+<p>Finally, to get this module executed, make sure to include it in the <code>site.pp</code> file.</p>
+<p>So, edit <code>/etc/puppet/code/environments/production/manifests/site.pp</code> using the following command:</p>
+<ql-code-block language="plaintext">
+sudo nano /etc/puppet/code/environments/production/manifests/site.pp 
+</ql-code-block>
+<p>Add an extra line that includes the reboot module.</p>
+<p>The file <code>/etc/puppet/code/environments/production/manifests/site.pp</code> should now look like this:</p>
+<ql-code-block language="plaintext">
+node default {
+   class { 'packages': }
+   class { 'machine_info': }
+   class { 'reboot': }
+}
+</ql-code-block>
+<p>Run the client on <strong>linux-instance</strong> VM terminal:</p>
+<ql-code-block language="plaintext">
+sudo puppet agent -v --test
+</ql-code-block>
+<p>Output:</p>
+<p><img alt="6.png" src="./Finish a Puppet deployment _ Qwiklabs_files/+xPTM2z32hS_y43_2MqnPTN75n32W4XDpKm5FdYySLs="></p>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="3" labinstanceid="43101170">
+Reboot machine
+</ql-activity-tracking></p>
+<p>And with that, you've added a whole new module to your deployment!</p>
+<h2 id="step7">Congratulations!</h2>
+<p>Woohoo! You've successfully improved the Puppet deployment, by modifying existing modules and adding new ones!</p>
+<h2 id="step8">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+</div>
+</div>
+
+
+<div class="lab-content__end-lab-button js-end-lab-button-container hidden">
+<ql-lab-control-button class="js-end-lab-button" running=""></ql-lab-control-button>
+</div>
+<!-- / TODO: Move recommendations into the end lab modal -->
+</ql-drawer-content>
+<ql-drawer end="" id="outline-drawer" open="" slot="drawer" width="320" aria-hidden="false" role="region" mode="side" style="width: 320px; visibility: visible;">
+<div aria-label="Lab Table of Contents" role="navigation">
+
+</div>
+<ul class="lab-content__outline js-lab-content-outline">
+<li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step1" class="">Introduction</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step2" class="">Accessing the virtual machine</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step3" class="">Puppet rules</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step4" class="">Install packages</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step5" class="">Fetch machine information</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step6" class="is-active" aria-current="step">Reboot machine</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step7" class="">Congratulations!</a></li><li><a href="https://googlecoursera.qwiklabs.com/focuses/20515557?parent=lti_session#step8">End your lab</a></li>
+</ul></ql-drawer>
+</ql-drawer-container>
+</ql-drawer-content>
+</ql-drawer-container>
+
+
+
+</div>
+</main>
+
+<span class="hidden" id="flash-sibling-before"></span>
+<ql-snackbar aria-live="polite" role="alert"></ql-snackbar>
+
+
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="modal-content mdl-shadow--24dp">
+<div class="modal-body">
+<p class="l-mbm">
+This lab has instructions to automatically manage the computers in your company's fleet, including a bunch of different machines with different operating systems.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+90m access
+·
+90m completion
+</p>
+<p class="small-label l-mbs">
+<strong>AWS Region:</strong>
+[] <strong></strong>
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/2404">https://googlecoursera.qwiklabs.com/catalog_lab/2404</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="button button--text" data-dismiss="modal">
+Got It
+</a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" tabindex="-1" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<ql-dialog headline="How satisfied are you with this lab?&lt;span aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;" id="lab-review-dialog" aria-hidden="true" tabindex="-1">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div aria-labelledby="lab-review-dialog" aria-required="true" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0" id="lab-review-rateit" role="slider" tabindex="0" aria-valuetext="5 of 5 stars"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 80px; display: block;"></div><div class="rateit-hover" style="height: 16px; width: 0px; display: none;"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="6830640" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="2404" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating" value="2"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Additional Comments</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</form><ql-button disabled="" id="submit" label="Submit" slot="action" text=""></ql-button>
+</ql-dialog>
+
+<ql-dialog headline="All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?" icon="error_outline" id="js-lab-are-you-sure-dialog" aria-hidden="true" tabindex="-1">
+<ql-button id="js-are-you-sure-button" label="Submit" slot="action" text=""></ql-button>
+</ql-dialog>
+
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    ql.chat.init();
+  ql.jumpContent.init();
+  ql.labControlPanel.addRecaptchaErrorHandler();
+  initLabContent();
+  ql.labOutline.links.init();
+  initLabReviewModal();
+  initLabReviewTranslations( {"star_amount_1":"1 of 5 stars","star_amount_2":"2 of 5 stars","star_amount_3":"3 of 5 stars","star_amount_4":"4 of 5 stars","star_amount_5":"5 of 5 stars"} )
+  ql.labAssessment.init();
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+
+
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./Finish a Puppet deployment _ Qwiklabs_files/anchor(2).html" width="256" height="60" role="presentation" name="a-cfky5jtn0o2z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource(4).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="-1" style="width: 107px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 30px; overflow: visible; opacity: 0; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; top: -9999px; visibility: hidden;" src="./Finish a Puppet deployment _ Qwiklabs_files/saved_resource(5).html"></iframe></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" src="./Finish a Puppet deployment _ Qwiklabs_files/bframe.html" name="c-88uhl366uws4" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

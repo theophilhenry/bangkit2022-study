@@ -1,0 +1,87 @@
+== RegEx ==
+Search query for text by string pattern
+Anything that matches, is returned. 
+It can answer :
+1. What are all the four-letter in a file?
+2. How manny different error types in this error log?
+
+Function
+re.search() # Find the first occurance, print using var[0]
+re.findall() # Find all occurance, returns a list. But if it has a group, it instead returns the group list string. enclose all regex with group to return all aswell.
+>> import returned
+>> regex = r"\[\d+\]"
+>> result = re.search(regex, log)
+>> ... = ...(..., ..., re.IGNORECASE) # search ignore-case
+# r"..." is a raw string. Tell the intepreter to input the string as it is.
+# Always use Raw String for RegEx in Python.
+# If no match, it returns None
+
+== Grep (Linux) ==
+Grep : will print any lines containing that string in the file that we give it. 
+# /usr/share/dict/words : File that some spell-checking programs use to verify the words exists or not (1 word per line)
+~$ grep [what_to_search] [file] # case sensitive
+~$ grep -i ... # non-case sensitive
+~$ grep thon /usr/share/dict/words
+
+-- Simple Regex --
+. : wildcard 1 char
+^ : match from beginning of line
+$ : match till the end of line
+[smth] : match all inside the sqrbkt
+[^smth] : don't match all inside sqrbkt
+| : 2 option, r"cat|dog", can return cat. Use () to group it.
+* : match 0-more occurance, r"P.*n", "Pynpapytin" -> Pynpapytin. # Remember, * takes as manyy as possible. (Greedy)
++ : match 1-more occurance, r"P.+n", "Pyn" -> None
+? : match 0-1 occurance. (Optional 1 character)
+{5} : find repeated pattern 5 times 
+{5, 10} : find repeated pattern 5-10 times
+{5,} : find repeated pattern 5-more times
+{,5} : find repeated pattern 0-5 times
+
+* note, if you have regex r'([a-c]).'. abc will return only a and c, because b is in group a
+
+-- About backslash --
+\n and \t are special string characters. Backslash can also escape special regex character
+so... we use raw string r"" so it wont interpred special string characters. It only be intepreted when parsing regex.
+
+-- More Regex --
+\w : any alphanumeric char (letters, numbers, underscore)
+\d : any digits
+\s : whitespace (space, tab, newline)
+\b : word-boundaries (\b\w{5\b}) # Find kalimat EXACTLY 5 kata
+
+ex : r"^\w[A-Za-z1-9_]*$" # Find valid python var name
+ex  : r"^[1-9]?[1-9]:[0-5][0-9] ?([Aa][Mm]|[Pp][Mm])$"
+print(check_time("12:45pm")) # True
+print(check_time("9:59 AM")) # True
+print(check_time("6:60am")) # False
+print(check_time("five o'clock")) # False
+How to regex "cannot be at the start of the text" ?
+
+== Advanced Regex ==
+Capturing Groups : Portions of the pattern that are enclosed in parantheses
+>>> result = re.search(r"^(\w*), (\w*)$", "Henry, Theophil'')
+>>> print(result.groups()) # Prints ('Henry', 'Theophil'), a tuple
+[0] : text matched by the entire regex
+[1] - [...] : subsequent matchgroup
+
+-- More regex function --
+- re.split() # Same like split but with regex
+ex :
+>>> re.split(r"[.?!]", "One Sentence. Another One? Last One!") 
+# Returns ['One Sentence', ' Another One', ' Last One', ''] 
+If you want to return the special character aswell, use capturing ()
+>>> re.split(r"([.?!])", "One Sentence. Another One? Last One!") 
+# Returns ['One Sentence', '.', ' Another One', '?', ' Last One'. '!', '']
+Btw "." in [] doesn't need to be escaped because it's taking the LITERAL character
+
+- re.sub(), create a new string by subtituting all or part of them for a different string.
+# Same like .replace(), but use regex for matching and replacing
+ex :
+>>> re.sub(r"[\w.%+-]+@[\w.-]+", "[REDACTED]", "Hi this is an email from theo@hangtuah")
+btw, if you want to access the group capture string in the replaced plan, use \1 \2 and so on.
+
+# We can also use ReGex to match pattern that repeats itself
+# It is called backreferences
+
+

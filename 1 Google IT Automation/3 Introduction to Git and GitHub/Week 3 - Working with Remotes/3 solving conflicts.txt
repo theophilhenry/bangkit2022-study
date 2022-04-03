@@ -1,0 +1,65 @@
+= Pull-Merge Workflow =
+Before you could push, you need to pull first.
+To sync local branch with remote branch.
+
+Now, say there's conflict. And you need to do a Three-way merge.
+~$ git log -p origin/master
+We see the problem, now edit it manually, then you can fix it!
+After that, git add, then git commit, done!
+Is this merge? Check!?
+
+= Pushing Remote Branches =
+Say you make a new branch
+~$ git checkout -b [local_branch_name] # Create and switch to a new branch
+Say you make changes, and commit it.
+After few commited, how to push our branch?
+~$ git push -u origin [local_branch_name]
+<-u origin> : To create the branch upstream, another way of referring to remote repositories.
+Now our branch is ready!
+
+= Merge/Rebase your Branches =
+To merge, you can use 
+~$ git merge
+or
+~$ git rebase
+Rebasing : changing the base commit that is used for our branch.
+Say there's a master and new-branch. new-branch old commit will be replaced/cutted, and place on top of the master branch.
+
+First we checkout to the branch we want to rebase, then we use git rebase. It will replay all the commit on top.
+~$ git rebase master # Rebase current checkout branch to master branch.
+Thenn you can git merge new-branch. Because it's a linear, it can do fast-forward merge!
+
+= Delete Branch Remotely and Locally =
+~$ git push --delete origin refactor
+~$ git branch -d refactor
+after all that you can push it
+~$ git push
+
+= Another Usage of Rebase =
+We could rebase the changes in the master branch when someone else also made changes.
+Example, we change our code,
+We want to see if others have made a change as well, but we don't want to create three-way merge! Keep it linear!
+
+We could use
+~$ git fetch
+Put the latest changes into the origin/master branch, but we don't apply them yet.
+Then we can do 
+~$ git rebase origin/master
+There's conflict? You can fix it manually.
+What's the difference between merging, and rebasing. If when there's a conflict with rebase, its the same with merge. 
+Well it created a new commit, instead of branching out.
+
+If you has fixedit, do
+~$ git rebase --continue
+
+- Another One -
+We could change the order of the commits, or even squash two commits into one.
+
+
+= Best Practices for Collaboration =
+Always synchronize your branches before starting any work on your own!
+But, you shouldn't rebase changes that have been pushed to remote repos.
+Commit good messages!
+
+Personal Access Token
+# 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

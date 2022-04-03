@@ -1,0 +1,42 @@
+BANGKIT 2022 (Dicoding Indonesia)
+
+Jl. Batik Kumeli No.50, Sukaluyu,
+Kec. Cibeunying Kaler, Kota Bandung
+Jawa Barat 40123
+
+14 February 2022
+29 July 2022
+
+Studi Independen
+
+Rencana Kegiatan :
+- Belajar dasar pemrograman OOP
+- Pengenalan logika pemrograman
+- Belajar dasar GIT
+- Belajar Google IT Automation Python
+- Belajar Mathematics for ML
+- DeepLearning AI dengan TensorFlow
+- Structuring Machine Learning Projects
+- Deeplearning Data and Deployment
+
+Capaian lain : 
+- Belajar bahasa inggris
+- Belajar berinisiatif, proaktif dan bertanggung jawab
+- Belajar Critical Thinking, Digital Branding, Interview Skill, Time Management, Communication Skill.
+
+Bentuk Evaluasi : 
+- Laporan Progress
+- Laporan Akhir
+
+Mata Kuliah :
+- IT Professional Management (1604C09Y)
+- IT Project Experience (1604C09U)
+- IT Project Management (1604C09V)
+- Deep Learning
+
+Motivasi dan Abstrak
+Saya adalah Theophil Henry Soegianto, salah satu mahasiswa di Teknik Informatika Universitas Surabaya. Saya Informati khususnya bagian program DSAI. Hal yang melatar belakangi saya mengikuti program BANGKIT 2022 adalah bekal yang bisa saya gunakan untuk masa depan. Pertama adalah kemampuan machine learning yang solid. Pembelajaran BANGKIT diadakan oleh Dicoding yang didukung dan dipercaya oleh beberapa perusahaan besar seperti Tokopedia dan Google. Tentunya, pembelajaran yang akan diberikan tidak asal-asalan. Pastinya sudah divalidasi juga. Materi yang didapatkan pastinya sudah terstandar internasional. Bonus juga, kami bisa mendapatkan sertifikasi pada akhir pembelajaran BANGKIT. Saya selama ini mempercayai saat belajar bersama dengan Dicoding. Saya telah menyelesaikan dan sedang mempelajari beberapa course disana. Saya menyelesaikan modul python, dan disana saya belajar banyak. Dicoding patut dipercaya untuk melaksanakan program BANGKIT ini karena saya sangat mudah memahami modulnya. Dari silabus yang saya baca, terdapat materi tentang Deep Learning yang saya sudah tertarik sejak lama. Saya ingin membuat proyek dengan mengimplementasikan skill machine learning saya, dan BANGKIT dapat menjadi wadah untuk itu. Pada akhir semester bangkit, 3 kurikulum akan berkumpul menjadi 1 dan membuat proyek besar yang dapat didanai.Di BANGKIT dikatakan juga peserta dapat berkonsultasi dengan expert terkait materi yang dipelajari melalui forum diskusi. Bukan hanya kemampuan machine learning. Terdapat banyak materi non-teknis yang ditawarkan. Di BANGKIT membangun mahasiswa yang berinisiatif, proaktif dan bertanggung jawab. Yang saya harapkan setelah mengikuti program ini adalah saya bisa memperdalam dan fokus kedalam pembelajaran Artifical Intellegence, dan saya bisa disiplin menjadi mahasiswa berkarakter. Program ini bisa berdampak pada orang dalam sisi tugas proyek. Proyek yang akan dikerjakan bisa bermanfaat baik bagi masyarakat ataupun peneliti selanjutnya. 
+
+Abstrak Kegiatan
+Di MBKM ini, saya akan mempelajari khusus materi Machine Learning Curriculum. Kurikulum ini diikuti oleh 1000 mahasiswa seluruh Indonesia. Pembelajaran diadakan dengan beberapa cara, Untuk machine learning, akan diajarkan melalui platform Coursera. Disana akan disediakan video yang dapat ditonton dan dipelajari. Apabila memiliki kebingungan, kami dapat bertanya dalam forum diskusi yang nanti akan diberikan. Di akhir studi akan ada project akhir dalam bentuk tim yang terdiri 5-6 orang dengan tema yang ditentukan oleh masing-masing kelompok. Kelompok tersebut juga memiliki mentor yang dapat membimbing dan menyetujui topik project akhir. Durasi dari aktivitas ini adalah 20 minggu (94 hari), dari 14 February sampai 29 July 2022. Tipe aktivitas nya adalah secara daring. Di kegiatan BANGKIT, akan ditekankan pembelajaran bagian Machine Learning, contohnya DeppLearning.AI TensorFlow dan DeepLearning.AI Data and Deployment. Mata kuliah yang saya akan konversikan adalah Deep Learning, dan pada capaian mata kuliah, deep learning mempelajari dasar-dasar neural network, deep learning dengan tensorflow, convulotional neural network. Capaian tersebut semuanya di cover dalam Mata Kuliah DeepLearning.AI di BANGKIT 2022. Jam pembelajaran dari DeepLearning.AI adalah 83 Jam untuk materi deep learning pertama, dan 53 jam untuk materi deep learning kedua. Penilaian yang dilakukan nantinya adalah exam pada platform LMS Cioursera. Peserta akan memperoleh sertifikat kompetensi di setiap kelas jika lulus. Peserta juga akan dipersiapkan untuk sertifikasi global TensorFlow Developer dari Google.
+

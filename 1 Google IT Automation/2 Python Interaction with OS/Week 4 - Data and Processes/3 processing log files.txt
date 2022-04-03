@@ -1,0 +1,17 @@
+-- Filtering Log FIles wit RegEx --
+CRON job : schedule scripts on UNIX-based OS
+Say we want to audit who's been launching the CRON jobs
+
+>>> import sys
+>>> logfile = sys.argv[1]
+>>> with open(logfile) as file:
+>>>   for line in file:
+>>>     if "CRON" not in line: continue
+>>>     result = re.search(r"USER \((\w+)\)", line)
+>>>     print(result[1])
+
+
+== Better use of Dict ==
+>>> name = "something"
+>>> username = {}
+>>> username[name] = username.get(name, 0) + 1

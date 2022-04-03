@@ -1,0 +1,55 @@
+= Types of Test =
+> White-box Test :
+A.K.A Clear-box or Transparent testing
+Relies on the creator's knowledge of the software to construct the test cases
+
+> Black-box Test : 
+The software treated like opaque box. 
+The tester doesn't know how the internal software works.
+It's written with the awareness what the program suppose to do (Requirements and Spesifications). But don't know how it does it.
+
+= Other Test Types =
+> Unit Test :
+Some unit, provides expected functionality.
+No out request (NO API or DB)
+
+> Integration Test : 
+Verify the interaction between different pieces of codes in integrated environment as expected.
+This integrate with outside world (DB and API)
+This usually take the individual modules of code that unit test verify then combine them.
+We might want to create a separate 'TEST ENVIRONMENT'. Don't change any production environment!
+in the env, you need test version of all relevant systems!
+* ex :
+- Create a separate test database
+
+> Regression Test :
+Written as part of debugging and troubleshooting process.
+Make sure the same mistake doesn't happen twice.
+
+> Smoke Test / Build Verification Test :
+Testing hardware equipment.
+Perform major sanity check in a program.
+'DOES THE PROGRAM RUNS?', if Smoke Test failed, other test wont pass either.
+
+> Load Test :
+The system behaves well under significant load (Many User Access It).
+Generate traffic to our application.
+Helpful when deploying new versions of app to verify performance doesn't degrade.
+
+= Test Suite =
+Taking together a group of test.
+Diverse test_type = robust test suite
+
+
+= Test-Driven Development =
+TDD : Create a test before writing the code. 
+I can be thoughtful and wellwritten program. 
+
+Creating the test first, can make sure that you have thought about 
+"the problem that you're trying to solve" and 
+some "different approaches" that you might use to accomplish it.
+First, run a test to make sure it fails. Once fixed, run test again. If it passes you can continue to next part for each feature.
+
+= Continous Integration =
+Engineers submit code -> integrated to main repo -> test automatically run
+

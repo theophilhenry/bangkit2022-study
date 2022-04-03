@@ -1,0 +1,48 @@
+= Revert Changes =
+~$ git checkout [filename]? <option>
+Go back to earlier commited state. 
+Revert the "UNSTAGED" changes.
+For example
+change "file.A"
+stage "file.A" [condition_1]
+change to "file.A". but no git add yet.
+checkout "file.A", will return it back to [condition_1]
+<-p> : Check individual changes, and ask wanna go back to previous snapshot or not.
+
+~$ git reset HEAD [filename]?
+Unstage staged changes!
+Resetting our changes to whatever's in the current snapshot
+<-p> : To ask you which spesific changes you want to reset.
+
+= Amending Commit =
+~$ git commit <option>
+<--amend> : From our STAGING area, run the git commit to overwrite the previous commit.
+* DON'T DO THIS IN PUBLIC REPO LMAO. causes CONFUSIONS *
+
+= Reverting Commit / Rollback =
+~$ git revert [what_commit_to_rewind]
+The param is not "WHERE TO". It instead specify "WHICH COMMIT TO REVERT".
+This command doesn't just undo, no no no.
+It creates an "INVERSE" commit of "OPPOSITE CHANGES" made in the BAD commit. To cancel them out.
+So it still leave a record of exactly what happened.
+BTW, git revert automatically commits the revert changes. 
+In the message, there's the ID of the current will-be-reverted commit.
+
+
+= About Commit ID =
+Composes of 40 character hashed with SHA-1.
+Why commit ID uses SHA-1?
+Well git doesn't use SHA-1 for Security Reasons...
+Instead, they're use to guarantee the consistency of our repo.
+You can't change anything in GIT commit without SHA-1 changing too.
+If someone intentionally corrupt some data, hash can spot that corruption!
+
+
+= Reverting More !!! =
+We can commit further back in time using the commit ID.
+~$ git revert [commit_id]
+After this command, your commit will be filled with the INVERSE commit of the TARGETED commit.
+
+
+
+

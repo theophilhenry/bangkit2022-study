@@ -1,0 +1,69 @@
+= Unit Test =
+Verify that small, isolated parts of a program are correct (Functions, Methods)
+Important Characteristic : 'ISOLATION'. 
+Unit only target the test unit. We assume it's not failing because of external reasons (DB failed)
+Our test shouldn't modify the production environment. If you do need to interact with other software, do it on Test Environment
+
+Say for example you have rearrange.py
+>>> from rearrange import rearrange_name
+>>> rearrange_name("Lovelace, Ada")
+Ada Lovelace
+
+= Automatic Test =
+Now we want to test it automatically. 
+Test usually written alongside the code we want to test. So create a separate file.
+Name it [module_we_want_to_test]_test.py
+
+Python have unittest module. 
+Unittest module provides a tst case class, with a lot testing methods.
+To access it, we create our own class by inheriting from TestCase
+Any METHODS we define in TestRearangge Class that start with prefix test_ 
+will automatically become tests that can be run by testing framework.
+
+3 types of assertion :
+1. self.assertEqual
+2. self.assertTrue
+3. self.assertFalse
+assertIs, assertIsNot, assertIsNone, assertIsNotNone, assertIn, assertNotIn, assertIsInstance, assertNotIsInstance
+When we want to run the test, use unittest.main()
+
+<.. nano ..>
+`
+#!/usr/bin/env python3
+from rearrange import
+import unittest
+
+class TestRearrange(unittest.TestCase):
+  # Base Case
+  def test_basic(self):
+    testcase = "Lovelace, Ada"
+    expected = "Ada Lovelace"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  # Edge Case
+  def test_empty(self):
+    testcase = ""
+    expected = ""
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  # Test Case
+  def test_double_name(self):
+    testcase = "Hopper, Grace M."
+    expected = "Grace M. Hopper"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  def test_one_name(self):
+    testcase = "Voldemort"
+    expected = "Voldemort"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+unittest.main()
+`
+~$ chmod +x rearrange_test.py
+~$ ./rearrange_test.py
+
+Test Case :
+> Edge Cases : Inputs of our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine out program will typically work with. 
+Simple terms, extreme values, causes error
+
+* IT IS BAD FOR AUTOMATION TO FAIL SILENTLY *

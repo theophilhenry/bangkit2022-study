@@ -1,0 +1,37 @@
+== csv module ==
+Reading
+>>> f = open("csv_file.txt")
+>>> csv_f = csv.reader(f)
+>>> for row in csv_f:
+...   name, phone, role = row # Unpacking Value
+...   print("Name : {}, Phone : {}, Role : {}".format(name, phone, role))
+>>> f.close()
+
+Writing
+>>> hosts = [["workstation.local", "192.523.45.21"], ["webserver.cloud", "192.168.123.2]]
+>>> with open('hosts.csv', 'w') as hosts_csv:
+...   writer = csv.writer(hosts_csv)
+...   # We can use writerow() or writerows()
+...   writer.writerows(hosts)
+
+== Read Write using Dictionary ==
+Read
+Say the first row have name column
+>>> with open('software.csv') as software:
+...   reader = csv.DictReader(software)
+...   for row in reader:
+...     print("{} has {} users".format(row["name"], row["users"]))
+
+Write
+>>> users = [{"name": "Sol Masni","username": "Solom", "department":"IT Infrastructure"},]
+>>> keys = ["name", "username", "department"]
+>>> with open("by_department.csv", "w") as by_department:
+...   writer = csv.DictWriter(by_department, fieldnames=keys)
+...   writer.writeheader()
+...   writer.writerows(users) #writerows or writerow
+
+// What is this code? 
+>>> csv.register_dialect('empDialect', skipinitialspace=True, strict=True)
+>>> reader = csv.DictReader(csv_file, dialect = 'empDialect')
+Dialect in, semacam aturan, format dari teks yang kita kirimkan. Kita mendeklarasikan format row di csv looks like? Kita buat empDialect gt.
+employeeData itu kayak gini. It's a rule.

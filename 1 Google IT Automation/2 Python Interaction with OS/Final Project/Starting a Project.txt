@@ -1,0 +1,13 @@
+= Starting a Project =
+1. Identifying the problem
+Plans out what needs to be done
+Desiring input and output
+2. Research
+How to tackle the problem with other library
+Don't re-invent the wheel
+Look at documentation and how to apply it.
+3. Planning
+Thinking what data type is useful
+Write down plan for quick refference
+4. Writing
+Writing & Checking - Testing

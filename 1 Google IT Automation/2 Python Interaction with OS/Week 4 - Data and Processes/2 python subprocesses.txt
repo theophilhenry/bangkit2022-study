@@ -1,0 +1,52 @@
+-- subprocess module --
+You can run system command with python command!
+>>> import subprocess
+>>> subprocess.run(["date"])
+>>> result = subprocess.run(["sleep", "2"]) # Any element following the program name, are command-line arg
+>>> result.returncode # get the return code
+# The parent is locked until the child subprocesses are done!
+# Child run on a different secondary env.
+# After the external command completes its work, the child process exits, and the flow of control returns to the parent.
+
+Why use this?
+- Handy for commands that either don't have useful output (cp, chmod, sleep, etc)
+- We don't care processing the output anyfurther
+- Its just fine to have the output, print it to the screen
+
+What? You still want to obtain the output?
+OK
+-- Obtaining the Output of System Command --
+~$ who # shows the current user login to a computer
+~$ host # can converst host name to an IP address or vice versa
+>>> result = subprocess.run(["whoami"], capture_output=True)
+>>> result.stdout
+>>> result.stderr # If the programs has an error.
+What's the b'' ? b tells us this string is not a proper string for Python.
+It's actually an array of bytes
+
+-- Array of Bytes --
+Data in computers is stored and transmitted in bytes, and each can represent up to 256 characters
+But, there are thousand character, in various language, UTF-8, Big 5 (chinese require over 10000 characters), 
+How to do it? We have encoding! like UTF-8 to indicate which sequences of bytes represent which characters.
+So when we save the output, python doesn't know which encoding to use! It simply represent it as series of bytes.
+To transform it, use decode method. This method applies encoding! Default it uses UTF-8. 
+
+== Advanced Subprocess Management ==
+-- We can have a local env in a subprocess --
+>>> my_env = os.environ.copy()
+>>> my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]]) # Path sep is path separator
+>>> result = subprocess.run(["myapp"], env=my_env)
+Another param for subprocess.run :
+- cwd=[change_cwd]
+# Change the current directories
+
+- timeout=[time] 
+# Kill the process if it takes longer than a given number of seconds to finish. 
+(useful for example want to connect server, but computer offline)
+
+- shell=[True/False] 
+# True : Python will first execute an instance of the default system shell, 
+then run the given command inside of it. 
+This means, our command can do variable expansions and other shell operations
+If we need to expand variables/globs set this param. (Have security risk!!!)
+

@@ -1,0 +1,54 @@
+== Streams ==
+How python connect to Keyboard/Screen
+it uses I/O Streams : The basic mechanism for programming input and output
+
+Streams = Pathways
+from program to input source (keyboard) or output source (screen)
+We call it streams : keep-flowing data
+
+I/O is not only for Python Programs. 
+When we run system command, I/O also use to connect command to terminal Input output
+
+Most operating system have 3 I/O streams :
+- STDIN : standard input, program <-> source of input. [Text from Keyboard]
+- STDOUT : standard output, program <-> target of output. [Display, Text displayed on Terminal, ]
+- STDERR : standard error, program <-> output. [Spesific to show error message & diagnostics from the program]
+
+== Environment Variable ==
+App that reads and execute commands : Shell = CLI to interact with OS
+Common shell Linux = BASH. Zsh. Fish.
+>> env # Check Environment
+-- Variables Example --
+to check, use echo $[ENV]. $ : access_value
+PATH : Where to look for executables file (specify dir)
+>>> os.environ.get([path_variable], "") # Get the value of envvar. .get(key, alternate_value_if_key_not_present)
+>>> os.environ.copy() # Copy the current env
+
+-- Set Environment --
+export FRUIT=Pineapple
+important, no space-in-between
+
+== Command Line Arguments ==
+Parameters that are passed when program start
+You can use argv list in sys module
+~$ .\parameters.py [something]
+>>> import sys
+>>> print(argv[1]) # [0] : name of program
+
+== Exit Status / Return Code ==
+It is VALUE returned by program to the shell
+All UNIX-like OS : returns 0 if SUCCESS else !0
+To check exit status of last executed command, use special variable $? 
+ex :
+~$ wc [file_here] # Counts number of lines words, and characters in a file
+~$ echo $? # Returns 0, success
+
+Costum exit value on python?
+>>> sys.exit(1)
+
+Since there's only 1 exit value variable, what if there's multiple programs running at the same time, and sends exit command. Wouldn't it be overlapping?
+
+-- More about Input Function --
+Python2 : raw_input() # String as it is 
+Python2 : input() # Evaluate the expression
+Python3 : input() # String as it s

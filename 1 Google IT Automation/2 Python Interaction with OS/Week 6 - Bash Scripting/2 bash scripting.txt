@@ -1,0 +1,52 @@
+= Bash =
+Not ony an intepreter, but also a scripting language
+
+= Variables =
+`example=hello`
+No Space!
+
+<file.sh>
+`
+#!/bin/bash
+
+line="-----------------------------"
+
+echo "Starting at: $(date)"; echo $line
+
+echo "UPTIME"; uptime; echo $line
+echo "FREE"; free; echo $line
+echo "WHO"; who; echo $line
+
+echo "Finishing at: $(date)"
+`
+
+= Globs =
+globs : Characters that allow us to create list of files
+* ? : common globs
+Let us create sequence of filenames that can be use as param
+[*] means ALL
+>>> echo *.py # List of all file ends with .py
+[?] means ONE CHAR
+>>> echo ???.py
+
+= Conditional Execution in Bash =
+Condition used based on "EXIT STATUS" of commands
+To check exit status use $?. 
+0 means success.
+
+`
+if grep "127.0.0.1" /etc/hosts; then
+    echo "OK"
+else
+    echo "Not Found"
+fi # Ends Conditional Block
+`
+> Test : command that evaluates conditions received, 
+and exits with 0 when true, and 1 if false
+>>> if test -n "$PATH"; then echo "Your path is not empty"; fi
+>>> if [ -n "$PATH" ]; then echo "Your path is not empty"; fi # Remember the SPACE
+<-n> ; Checks if a string var is empty or not
+
+
+
+

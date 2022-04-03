@@ -1,0 +1,4 @@
+Qwiklabs : online learning env. Google Cloud Console to create Virtual Machine. 
+
+If we run 8 VM, each will take portion.
+VM will use network card to communicate through emulated card. 

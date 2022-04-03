@@ -1,0 +1,3 @@
+../data/jane_profile_07272018.doc
+../data/jane_pic_07272018.jpg
+../data/jane_contact_07272018.csv

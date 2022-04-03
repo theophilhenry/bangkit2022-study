@@ -1,0 +1,68 @@
+= Looping =
+while : condition true
+for : iterate list
+
+= While Loops =
+`
+n=1
+while [ $n -le 5  ]; do
+    echo "Iteration $n"
+    ((n+=1))
+done
+`
+> [ (()) ] : Bash construct to do arithmetic operations
+
+<bash>
+`
+n=0
+command=$1 # Get the first command line argument
+while ! $command && [ $n -le 5 ]; do
+    sleep $n
+    ((n=n+1))
+    echo "Retry #$n"
+done
+`
+
+= For Loops =
+Iterate sequence of something.
+How to construct a list? Do spaces! :D
+
+<bash>
+`
+for fruit in peach orange apple; do
+    echo "I like $fruit"
+done
+`
+<bash>
+`
+for file in *.HTM; do
+    name=$(basename "$file" .HTM) 
+    mv $(file) "$name.html"
+`
+[ Add "" to allow space on file name ]
+TIPS :
+When you want to run a file that modify file system,
+It's a good idea without actually modifying the file system :)
+do 'echo mv $(file) ...' first instead
+
+
+
+= Advanced Command Interaction =
+> cut : take bits of each line using a field delimiter 
+-f 1 or 1-2 or 3- or 1,3
+
+~$ tail /var/log/syslog | cut -d' ' -f5- # Print field 5 and everything after it. 5 means the fifth word
+~$ cut -d' ' -f 5- /var/log/syslog | sort | uniq -c | sort -nr | head
+What if you want to do it for a multiple log files?
+<bash>
+`
+for logfile in /var/log/*; do
+    echo "Processing file $logfile"
+    cut -d' ' -f5- "$logfile" | sort | uniq -c | sort -nr | head
+done
+`
+
+= Choosing between BASH vs PYTHON =
+Bash can turn a command that operate on one file to automate 1000 files!
+But when bash become "complex", better idea to write a simple Python script because of Readability.
+Unfortunately, bash present on "certain OS" only. Cross-platform, use Py instead.

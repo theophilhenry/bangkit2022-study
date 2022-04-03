@@ -1,0 +1,50 @@
+= Skipping the Staging Area =
+Stage, Commit, that the usual.
+But if we know the current changes are the ones to commit, do
+~$ commit -a -m [messages]
+Automatically stage every file that's tracked and modified then commit.
+* git commit -a DOESN'T WORK on NEW FILES because they are UNTRACKED *
+
+= HEAD in GIT =
+Git uses "HEAD" alias to represent currently "CHECKED-OUT" snapshot.
+What our Working Tree is working with :D
+Head can be a different commit from a different branch.
+Head can be an old commit, if we go back in time.
+
+= Get Information about Changes =
+~$ git log <option>
+<-p> : P for patch to see what changes in the commits. Patches that was created.
+<-2> : When you want to only see the last 2 commit
+<--stat> : Which file were changed, and how many lines added or removed. 
+
+~$ git show [commit_id]?
+Shows the 1 commit with the ID as parameter.
+Also view the log message and diff output the last commit if we don't know the commit ID.
+
+~$ git diff [file]? <option>
+See the changes based on the HEAD. The file is optional parameter
+* GIT DIFF only display UNSTAGED CHANGES *
+<--staged/--cached> : See changes that are staged but not commited
+
+~$ git add <option>
+<-p> : All the changes that have been made, ask a question do you want to stage it.
+
+
+= Deleting and Renaming Files =
+~$ git rm [filename]
+Stop the files being tracked, and remove from the git directory.
+Changes is autostaged, so you only need to commit it.
+~$ git mv [old_name] [new_name]
+Rename the file, autostaged, go commit!
+
+= Ignoring Untracked Files =
+~$ nano .gitignore
+`
+.DS_STORE
+./node_modules
+./etc.
+`
+If you newly added gitignore, track it first
+~$ git add .gitignore
+
+

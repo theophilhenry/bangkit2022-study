@@ -1,0 +1,32 @@
+2 Main Parts of OS
+- Kernel :
+Talk to hardware, and manage resources
+- User Space
+Everything outside kernel, UI kesini
+
+OS does a lot a things. 
+Linux itself is a kernel by Linus Trovald.
+Unix : OS developed Bell Labs, OS went through different version. Fundamental of Linux based on Unix.
+Mac OS also refference Unix
+
+Intepreted Language : Rely on Intremediary program called Intrepeter. Generally run slower than compiled ones. Python, Rubi, JS, Bash, Powershell
+Compiler Language : Source code -> compiler -> machine level language. Compilation itself takes time. C C++ GO Rust. To run in another OS, needs to be recompilled.
+
+Java and C# use mixed approach. Compiled into intermediate code. Then it can run to different platforms.
+
+-- Linux Command 
+> cat : show the contents of a file in Linux
+> shebang : extra line that tells the OS what command we want to execute that script. What command to use when running the script.
+We want to run file using python 3, so shebang wil be like this
+#!/usr/bin/env python3
+> chmod : change file permission. you want your file to be exe to be run directly. (chmod +x hello.py)
+> ./ : run spesific executable file (prefixing, no space). Why? Because the script isn't listed in the PATH variable. 
+
+- Peaking into Modules -
+ls -l /usr/lib/python3/dist-packages/...
+Say for example "request", inside it there's a lot .py files.
+Notice the "__init__.py" files. It is red when the module gets imported
+it's used by the intrepeter to check if a directory with Python files should it be a module. If you have sub-directiries and want that intepreter to know there's a module, create this file. 
+Even you dont have anything to put in this file, leave it empty, so Python can recognize a directory as a Python Module.
+
+

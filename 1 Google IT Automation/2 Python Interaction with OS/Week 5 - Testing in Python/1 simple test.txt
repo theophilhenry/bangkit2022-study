@@ -1,0 +1,12 @@
+== Testing ==
+Software Testing : Evaluating computer code to be as expected
+Test can help make good code great!
+- Automating Test
+- Unit Test
+- Integration Test
+- Test Driven Development
+
+== Simple Test vs Automated Test ==
+Simplest ways is to change the param
+Automatic Testing : Check if the returned value matches the expectation
+

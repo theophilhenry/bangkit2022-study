@@ -1,0 +1,13 @@
+= Using GITHUB -
+~$ git clone [url]
+~$ git push # Push after commit
+~$ git pull # Pull the latest snapshot
+
+= Avoid Passsword Prompt =
+> First way : Make a SSH key-pair, and store the public key in our profile
+> Second way : Use Credential Helper.
+Chaches our credentials for a time window. 
+Git has it, just use 
+~$ git config --global credential.helper cache
+15 Minutes cache
+

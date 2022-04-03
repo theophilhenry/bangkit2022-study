@@ -1,0 +1,10 @@
+001 jane ../data/jane_profile_07272018.doc
+002 kwod ../data/kwod_profile_07272018.doc
+003 pchow ../data/pchow_profile_07272018.doc
+004 janez ../data/janez_profile_07272018.doc
+005 jane ../data/jane_pic_07272018.jpg
+006 kwood ../data/kwood_pic_07272018.jpg
+007 pchow ../data/pchow_pic_07272018.jpg
+008 jane ../data/jane_contact_07272018.csv
+009 kwood ../data/kwood_contact_07272018.csv
+010 pchow ../data/pchow_contact_07272018.csv

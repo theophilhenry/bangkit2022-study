@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Great Customer Service",
+    "name": "John",
+    "date": "2017-12-21",
+    "feedback": "The customer service here is very good. They helped me find a 2017 Camry with good condition in reasonable price. Campared to other dealers, they provided the lowest price. Definttely recommend!"
+  },
+  {
+    "title": "You will find what you want here",
+    "name": "Tom",
+    "date": "2019-06-05",
+    "feedback": "I've being look around for a second handed Lexus RX for my family and this store happened to have a few of those. The experience was similar to most car dealers. The one I ended up buying has good condition and low mileage. I am pretty satisfied with the price they offered."
+  },
+  {
+    "title": "Waste of my time",
+    "name": "Anonymous",
+    "date": "2018-09-21",
+    "feedback": "I came in around 6pm and they seemed about to close the store. One of the sales seemed not being patient with me and made me feel like I have to either buy a car or come back later. Of course I didn't buy a car there. Hopefully they can treat every customer with more patience."
+  }
+]

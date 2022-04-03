@@ -1,0 +1,39 @@
+= Branch =
+Branch is a pointer to a particular commit. 
+An Intependent Line of Development
+
+The default branch called 'MASTER'
+Usually represent the known-good state of our project.
+
+= Creating Branch =
+We can use git brahnch command to list, create, delete, and manipulate branches.
+~$ git branch # List all available branches.
+~$ git branch [branch_name] # Add new branch
+Main branch are located in the asterisk '*'
+~$ git checkout [branch_name] # Changing main branch
+~$ git checkout -b [branch_name] # Create and change branch
+
+When we git log, we know which branch is ahead.
+
+~$ git branch -d [branch_name]
+
+= Merging =
+Combining branch data, and history together.
+~$ git merge [branch_name]
+Git uses two different algorithm to merge :
+> Fast-forward : The checkout branch are also in the branch that's being merge.
+> Three-way merge : The main branch has diverged in some way. If file okay to merge, it will merge. 
+But the same file with the same line, there will be Merge Conflict!
+
+= Merge Conflict =
+If you do git checkout, and merge error.
+Check
+~$ git status
+and then, open your file in your text editor.
+After you resolve your problem, do 
+~$ git add [the_conflicted_file]
+do git status or go for git commit, up to you :D
+
+= Check git log the AWESOME WAY =
+~$ git log --graph --oneline
+

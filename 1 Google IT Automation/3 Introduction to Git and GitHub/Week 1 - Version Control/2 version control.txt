@@ -1,0 +1,24 @@
+= Version Control =
+It seems overkill when you do it alone. But do you even need it? YES.
+Version control is like a time machine.
+
+Make IT more scalable and reliable.
+btw
+DNS zone file : configuration file that specifies the mapping between IP address and host names in my network.
+DHCP damon : 1 system up, if down, there is a standby machine to back it up.
+
+= History of GIT =
+Git (2005) created by Linus Trovalds.
+Free Open-Source.
+
+Git is distributed. Every contributor have the copy of their repository on own machines.
+Git can work as a server and a client. 
+Git official website is git-scm.com. scm? accronym similar to VCS. it is Source Control Management.
+
+In Windows, it comes with pre-installed environment called 'MinGW64'.
+This env let us operate windows with the same command line as linux.
+You can download from gitforwindows.org. Git releases with GPL2 which is Free Software License.
+
+During instalation :
+OpenSSL or Native Windows Secure Channel Lib? Choose the second option if you want to operate with your company internal systems.
+

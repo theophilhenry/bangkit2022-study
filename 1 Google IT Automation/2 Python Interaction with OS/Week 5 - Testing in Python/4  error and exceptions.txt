@@ -1,0 +1,32 @@
+= Try-Except =
+Trying to validate a file, have sooo many conditions!
+Use try-except
+
+`
+try:
+  pass
+except OSerror:
+  pass
+`
+
+= Raising Errors =
+Like "throw"ing an error
+>>> raise [some_error_type]("message!!")
+
+= Assertion =
+Assert is like an "Asumption"
+Assert Error : Verify that a conditional expression is true and if its false it raises AssertionError.
+`
+  assert type(username) == str, "username must be a string"
+`
+Heads up!
+Assertion will get removed from our code if we ask the intepreter to optimize it to run faster.
+
+Rules
+> Raise : to check conditions that expect to happen during runtime.
+> Assert : to verify situations that aren't expected but might cause our code to missbehave.
+
+
+= Testing Errors =
+>>> assertRaises(ValueError, validate_user, "user", 1) # ([error_expected], [function_name], [any_param]...)
+>>> assertRaises([], AssertionError)

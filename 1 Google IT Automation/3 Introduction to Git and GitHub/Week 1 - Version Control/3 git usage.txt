@@ -1,0 +1,56 @@
+= First Step =
+Basic Configuration :
+~$ git config --global user.email 'email@gmail.com'
+~$ git config --global user.name 'Theo'
+<--global> : We want to set this value for all git repo that we use. We can set different value to diff repo too btw.
+~$ git config -l # Check the current configurations
+
+~$ git init
+Create repo from scracth.  
+When we run git init, we initialize empty repository. 
+Inside there's '.git' directory. Think of this as a database for the GIT project.
+That directory [store changes] and the [change history].
+
+The area outside .git is called 'Working Tree'.
+Working Tree have the currently tracked by Git 
+and any new files that haven't yet added to the list of track files.
+
+Say we copy file to the Working Tree.
+The copied file still untracked by Git.
+To make git Track our file, use 
+~$ git add [file_that_you_want] # Track files.
+With that, we added the file to the 'Staging Area'
+Staging Area (Index) : File maintained by Git, contains all of the information
+about what files and changes are going to go into your next commit.
+Simple words, Containes Changes that have been marked to be included in the next commit! 
+
+~$ git status
+Get current information of the Working Tree, and Pending Changes.
+There are Changes to be Commited.
+
+~$ git commit -m [messages]
+Commit staged files. 
+
+~$ git clone
+Make a clone of a repositories.
+
+= Tracking Files =
+Git Project consist of 3 part
+Git Directory, Working Tree, Staging Area
+
+Tracked File, the snapshots our computer took.
+Untracked File, arent part of a snapshot YET, this usual for new files.
+
+Each track file have 3 states :
+> Modified : Made changes, haven't commited
+> Staged : The changes are ready to be commited
+> Commited : Save the staged file in SVM
+
+= Wrting a Commit Message =
+Write a good commit message!
+How?
+First Line < 50 char
+Next Line is Description, < 72 char
+
+~$ git log # Display commit messages
+

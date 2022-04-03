@@ -1,0 +1,154 @@
+= Bash Linux Command =
+All this comes from UNIX.
+They should do 1 things, and can do it very well!
+> echo : print message
+> cat : contents of file
+> ls : list dir
+    # returns [permission] [i-nodes points to the file] [owner:group] [size] [last_modified] [name]
+    <-la> : detailed + hidden
+> chmod : change permission
+> touch : create an empty file
+> mv : rename or move
+> cp : copy
+> rm : remove. 
+    <-r> : file with file in it
+> rmdir : remove dir
+
+= Redirecting Streams =
+Redirection : the process of sending a stream to a different destination
+It's useful when you want to store the output of command to a file.
+> [ > ] : Redirect STDOUT to a file (Write mode) 'OVERWRITTEN'
+    ex :
+    ~$ ./script.py > new_file.txt 
+    # The stdout will go to the file, if not exists, it will create it.
+> [ >> ] : Redirect STDOUT to a file (Append Mode)
+> [ < ] : Read from file
+    ex :
+    ~$ ./streams_err.py < new_file.txt
+> [ 2> ] : Redirect STDERR to a file (Write Mode)
+    Why 2? It is the file descriptor of the STDERR Stream.
+    File Descriptor : Variable pointing to IO resource
+    File Descriptor :
+    > 0 : STDIN
+    > 1 : STDOUT
+    > 2 : STDERR
+
+= Pipe & Pipelines =
+Yet another Redirection Tools
+Pipes : Connect multiple scripts, command, and other programs together into a data processing pipelines.
+It can connect the output of one program to the input of another, in order to pass data between programs.
+[ | ] : The pipes character. 
+* ex :
+~$ ls -l | less # Displays list of current directories paginated
+~$ cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head
+First, use cat to get content
+Second, the cat content gets tr(translate). It takes the 1st param, and transform them with 2nd param.
+Third, sort the result alphabetically
+Fourth, display each match once. -c prefixes each line with number of times it occured
+Fifth, sort and -nr sort numerically reversed order
+Seventh, head prints the first 10 lines to STDOUT.
+
+= What about python pipes? =
+Python can read STDIN using stdin file object, provided by sys module.
+This is a file object like open(). 
+Say you want a script that reads each line of the input, then prints with the first letter uppercased.
+<capitalize.py>
+`
+import sys
+for line in sys.stdin:
+  print(line.strip().capitalize())
+`
+<haiku.txt>
+`
+advanced your career,
+automating with Python,
+it's so fun to learn.
+`
+~$ cat haiku.txt | ./capitalize.py
+
+= Signalling Processes =
+OS have buncho processes. Processes need to talk to each other.
+Example, program start background process. Background timeout? terminate!
+We can do that using 
+> Signals : Tokens delivered to running processes to indicate a desired action. 
+you can do : [pause] [terminate] [reload_config] [close_all_open_files] [etc...]
+* ex :
+~$ ping 8.8.8.8 # Sends ICMP packets once per second
+
+= More Bash Linux Command =
+> (Ctrl+C) : Sends SIGINT. The process does whatever it needs to finish cleanly.
+> (Ctrl+Z) : Sends SIGSTOP. Stop running without terminating. run it again using 'fg' for background -> foreground.
+> kill <PID> : Sends SIGTERM. Terminating program. Run on a separate terminal. Needs [PID]
+> ps : lists the processes executing in the current terminal for the current user
+> ps ax : <ax> lists all processes currently executing for all users.
+> top : show process running using CPU time.
+> jobs : list of jobs currently running or stopped.
+
+~$ ps ax | grep ping # We get the PID from far left. ex 4619.
+~$ kill 4619
+# Hasta la vista ping 
+
+
+
+= Cheat Sheets =
+Managing files and directories
+cd directory: changes the current working directory to the specified one
+
+pwd: prints the current working directory
+
+ls: lists the contents of the current directory
+
+ls directory: lists the contents of the received directory  
+
+ls -l: lists the additional information for the contents of the directory  
+
+ls -a: lists all files, including those hidden  
+
+ls -la: applies both the -l and the -a flags  
+
+mkdir directory: creates the directory with the received name
+
+rmdir directory: deletes the directory with the received name (if empty)
+
+cp old_name new_name: copies old_name into new_name
+
+mv old_name new_name: moves old_name into new_name
+
+touch file_name: creates an empty file or updates the modified time if it exists
+
+chmod modifiers files: changes the permissions for the files according to the provided modifiers; we've seen +x to make the file executable
+
+chown user files: changes the owner of the files to the given user
+
+chgrp group files: changes the group of the files to the given group
+
+Operating with the content of files
+cat file: shows the content of the file through standard output
+
+wc file: counts the amount of characters, words, and lines in the given file; can also count the same values of whatever it receives via stdin
+
+file file: prints the type of the given file, as recognized by the operating system
+
+head file: shows the first 10 lines of the given file
+
+tail file: shows the last 10 lines of the given file
+
+less file: scrolls through the contents of the given file (press "q" to quit)
+
+sort file: sorts the lines of the file alphabetically
+
+cut -dseparator -ffields file: for each line in the given file, splits the line according to the given separator and prints the given fields (starting from 1)
+
+Additional commands
+echo "message": prints the message to standard output
+
+date: prints the current date
+
+who: prints the list of users currently logged into the computer
+
+man command: shows the manual page of the given command; manual pages contain a lot of information explaining how to use each command (press "q" to quit)
+
+uptime: shows how long the computer has been running
+
+free: shows the amount of unused memory on the current system  
+

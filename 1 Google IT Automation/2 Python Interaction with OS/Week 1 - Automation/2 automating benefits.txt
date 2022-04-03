@@ -1,0 +1,19 @@
+Onboarding Task :
+- Create user account
+- A mail ox and home folder,
+And setting appropriate setting the permission
+
+How automation could fail?
+- Any task written with automation have a trade-off. Is the time and effot it'll take to write the script worth the potention automation benefits?
+How long to do task * frequency <= manually, it's good
+- If task is complex, and performed in frequently, it may seem automating is more trouble than it's worth.
+One fifth of the sysadmin tasks you perform, compromise four fifth of your total workload
+Bit-rot, where software is outdated and falling out with the env.
+How to avoid silent failure? Build a notification system in the automated system. What if the data wrong? Well we can automate the restore and compare data from master data set.
+Forensic Value, a logging data.
+
+Automation Example :
+- PC Health Check, 
+shutil module -> disk_usage("/") function,to check available disk space.
+psutil -> cpu_percent(0.1) function, to show how much CPU is used. Receive interval seconds and average it.
+
