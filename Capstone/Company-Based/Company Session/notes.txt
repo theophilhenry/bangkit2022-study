@@ -1,0 +1,76 @@
+== Price Optimizing ==
+bagaimana kitamendapatkan data yang pas.
+
+- kesegaran
+- deskripsi
+
+Yang bisa membuat unik
+- saat ini kyk gimana. disesuaikan dengan timeframe.
+
+> Yang bisa kita buat unik
+- supply and demand. disesuaikan dengan stok, dan musim panen.
+- news summarization. 
+
+deskripsi
+- penyimpanannya. 
+- organic. 
+- cara penanaman.
+- cara penyimpanan. suhu?
+- higenis nya.
+
+
+== Chatbot for Customer Operation ==
+
+Masalah yang umum chat bot aja. Untuk masalah complex. itu ticketing. 
+
+> Yang bisa buat kita unik
+
+Untuk yang complain, itu misal customer komplain tapi dia belum checkin, chatbot kita bisa solve problem itu dengan secara cepat mengalokasikan dana user ke merekomendasikan hotel yang lain, dengan merekomendasikannya dengan harga yang pas, dan service yang sesuai dengan hotel sebelumnya. 
+
+Chatbot kita auto learning. Misal sampai gak bisa banget, itu bisa learn dari CS.
+
+Dari sisi complain yang banyak
+- Seberapa cepat menemukan solusi yang terbaik. Chatbot yang bagus, kita tidak perlu menjelaskan banyak hal, tapi dia akan cepat mengerti.
+- Chatbot kita akan bisa menjawab user dengan cepat. Karena auto-learning, itu bisa menyelesaikan masalah user banyak dgn cepat.
+- Chatbot kita akan mensortir, dari masalah yang paling urgent. Ada resource management. Kategori masalah. 
+- Mention bahwa CC kita, menggunakan virtual machine?
+- 
+
+
+Sisi pengiriman CS
+- Karena kan dari perusahaan itu punya CS beda beda, nah itu disesuaikan sama kemampuannya dia.
+- Nah, dari CS itu kan kalo skill nya mantap, bisa penuh bgt, chatbot kita bisa load-balancing ke CS nya, supaya suatu CS gak overload.
+
+
+== On-Demand Ambulance ==
+Masalah :
+- Ambulance nya gaada, 
+- Ambulance nya salah prioritas, 
+
+- Bisa membuat fitur untuk mencari sukarelawan (user), user itu bisa ngeluarin sinyal darurat (bisa guest user). Lalu sebuah user bisa mendapatkan notif, untuk membantu user tersebut. Kalo user tersebut mau membantu nganter pake mobil, atau bantu melahirkan jika ambulans full, dia harus verifikasi data dulu.
+
+Adanya radio button untuk menyesuaikan tingkat level kebahayaan :
+- Sementara menunggu, dia bisa ditampilkan pertolongan pertama, dalam text. Kalo kurang jelas, telp pemerintah/emergency call. 
+- Bisa Prioritasin pasien yang akan dijemput.
+- Bisa kasi sinyal ke sekitar, sesuai dengan keadaannya. 
+
+ML itu 
+- handle prediksi jarak sama waktu. 
+
+Geo, itu kan ngirim sinyal. Dengan radius beberapa kilo kan dapet notif. Itu bisa buat thread. Ada postingan. Ada bisa ngasi saran. Ini jga bisa menghindari duplikasi mobil datang 2x.
+Bisa juga ada status solved, ada status diantar ambulan. Dan itu ga langsung hilang. Itu kalo mau minta donor darah segera, itu bisa di broadcast disana. 
+
+Kalo di cancel ,ada sistem karma, Karma nya turun. 
+
+Khusus sukarelawan yang mengantar, itu diperlukan kedua. 
+
+Untuk orang yang sering dihubungin. 
+Pas dafatr, kita diminta masukin nomor darruat. Pas kita kecelakaan, kita make orang untuk request app, ketika request ambulance, otomatis akan diinfokan ke nomor itu. Minim di telp dulu. Kalo ga diangkat, kirim ke chat. 
+
+Dari hp nya dia sendiri, dia bisa langusng emergency call. 
+Kalo guest, itu solved juga.
+
+Kasus lain dimana orang lain, itu NIK.
+Kita sudah meminimalisir consent, dengan memberikan data emergency call sebagai opsional. Dan harus foto KTP dari user tersebut.
+
+BTW, ADA ACCEPT" RELAWAN YANG MAU NGANTER KALO GAK ADA AMBULANS. Kalo baru gaada ambulans, baru ada notif ke user" "mau menerima untuk nganter naik mobil gak" gitu.
