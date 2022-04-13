@@ -2,3 +2,5 @@
 
 
 ## Sequences and Prediction <hr>
+Sequences data that are changed overtime.
+
