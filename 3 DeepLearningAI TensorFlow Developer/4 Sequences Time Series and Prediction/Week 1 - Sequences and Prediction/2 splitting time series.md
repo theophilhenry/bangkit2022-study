@@ -1,6 +1,5 @@
 <style>hr{opacity: 20%; height: 1px!important; margin-bottom:0px!important</style>
 
-
 ## Train Validate Test <hr>
 We divide it into period of each corresponding data (fixed partitioning)
 
