@@ -2,3 +2,10 @@
 
 
 ## Real World Times Series Data <hr>
+You can use Convolutions!
+
+Here, we change the window dataset,
+and then add the Convolutions in the first layer.
+
+For real world data, append it to list first, then convert it to numpy, it is more memory efficient!
+
