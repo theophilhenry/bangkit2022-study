@@ -15,8 +15,8 @@
  * =============================================================================
  */
 
-const IMAGE_SIZE = 784;
-const NUM_CLASSES = 10;
+const IMAGE_SIZE = 784; // 28x28
+const NUM_CLASSES = 10; 
 const NUM_DATASET_ELEMENTS = 65000;
 
 const TRAIN_TEST_RATIO = 5 / 6;
