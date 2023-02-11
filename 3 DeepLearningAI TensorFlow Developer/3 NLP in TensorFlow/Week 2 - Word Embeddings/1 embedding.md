@@ -14,7 +14,7 @@ import tensorflow_datasets as tfds
 imdf, info = tfds.load("imdb_reviews", with_info=True, as_supervised=True) # Returns data and metadata
 
 import numpy as np
-train_data, test_data = dmdb['train'], imdb['test'] # 25k data training, and 25k data testing
+train_data, test_data = imdb['train'], imdb['test'] # 25k data training, and 25k data testing
 
 training_sentences = []
 training_labels = []

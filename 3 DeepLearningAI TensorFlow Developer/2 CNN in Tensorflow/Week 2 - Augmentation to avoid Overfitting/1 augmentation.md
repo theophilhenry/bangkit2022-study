@@ -14,7 +14,7 @@ Dataset small = Few examples = Classification mistakes
 
 ```python
 train_datagen = ImageDataGenerator(
-    rescale = 1.255, # Resacling the output
+    rescale = 1./255, # Resacling the output
     rotation_range=40, # 0-180 degree random rotation
     
     # Shifting : Move the image around inside it's frame.
